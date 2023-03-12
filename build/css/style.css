@@ -423,14 +423,12 @@ body {
 }
 
 html {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Placeholder", "Arial", sans-serif;
-  color: #000000;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  color: #041827;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -443,7 +441,7 @@ body {
 }
 
 a {
-  color: #000000;
+  color: #f2f5f6;
   text-decoration: none;
   cursor: pointer;
 }
@@ -1300,6 +1298,49 @@ button,
 
 .custom-select .input-message.is-valid {
   color: #15ab07;
+}
+
+.header {
+  width: 100%;
+  background-color: #041827;
+}
+
+.main-block {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(4, 24, 39, 0.7)), to(rgba(4, 24, 39, 0)));
+  background: -o-linear-gradient(top, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%);
+  background: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%);
+}
+
+.main-block__image {
+  background-color: #041827;
+}
+
+.advantages {
+  background-color: #e5e5e5;
+}
+
+.about-company {
+  background-color: #e5e5e5;
+}
+
+.products {
+  background-color: #041827;
+}
+
+.feedback {
+  background-color: #00b2ff;
+}
+
+.footer {
+  background-color: #041827;
+}
+
+.social-list {
+  background-color: #041827;
+}
+
+.form {
+  background-color: #00b2ff;
 }
 
 /* @mixin hover-focus {

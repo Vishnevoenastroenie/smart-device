@@ -12,6 +12,16 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 
 $color-neon-blue:                   #2c39f2;
 $color-torch-red:                   #ff1553;
+$color-black-pearl:                 #041827;
+$color-barossa:                     #3c3639;
+$color-deep-sky-blue:               #00b2ff;
+$color-alice-blue:                  #f2f5f6;
+$color-whisper:                     #e5e5e5;
+$color-cerulean:                    #026592;
+$color-pacific-blue:                #019bdf;
+$color-alice-blue-second:           #f8fdff;
+$color-java:                        #339a9a;
+$color-picton-blue:                 #72a0ca;
 
 // Gradient
 
@@ -22,6 +32,8 @@ $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0
 
 // переменная используемая в html для подключения скейлинга
 $fz-default:                        16px;
+$ff-roboto-condensed:               "Roboto Condensed", "Arial", sans-serif;
+
 
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
@@ -50,6 +62,11 @@ $vp-1024:                           1024px;
 $vp-1280:                           1280px;
 $vp-1440:                           1440px;
 $vp-1920:                           1920px;
+
+$mobile-size-max:                   767px;
+$tablet-size-min:                   768px;
+$tablet-size-max:                   1023px;
+$desktop-size-min:                  1024px;
 
 // Retina
 // ---------------------------------

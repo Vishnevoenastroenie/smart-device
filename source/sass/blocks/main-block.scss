@@ -1,0 +1,9 @@
+@import "../variables";
+
+.main-block {
+  background: linear-gradient(180deg, rgba($color-black-pearl, 0.7) 71.72%, rgba($color-black-pearl, 0) 100%);
+}
+
+.main-block__image {
+  background-color: $color-black-pearl;
+}
