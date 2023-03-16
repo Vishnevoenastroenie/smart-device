@@ -1633,7 +1633,9 @@ button,
 }
 
 [data-accordion=parent].no-transition [data-accordion=content] {
+  /* stylelint-disable-next-line */
   -webkit-transition: none;
+  /*  stylelint-disable-next-line */
   -o-transition: none;
   transition: none;
 }
@@ -1641,7 +1643,9 @@ button,
 [data-accordion=content] {
   max-height: 0;
   overflow: hidden;
+  /*stylelint-disable-next-line */
   -webkit-transition: max-height 0.3s;
+  /*  stylelint-disable-next-line */
   -o-transition: max-height 0.3s;
   transition: max-height 0.3s;
 }

@@ -7,7 +7,7 @@ import {showsButtonDetails} from './modules/about-company-toggler/about-company-
 
 // ---------------------------------
 window.addEventListener('DOMContentLoaded', () => {
-
+  showsButtonDetails();
   // Utils
   // ---------------------------------
 
