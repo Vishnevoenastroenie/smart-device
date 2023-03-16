@@ -4,7 +4,7 @@
   margin-bottom: 100px;
 
   @media (max-width: $tablet-size-max) {
-    margin-bottom: 79px;
+    margin-bottom: 70px;
   }
 }
 
@@ -25,8 +25,10 @@
 }
 
 .about-company__container {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+
+  gap: 25px;
+  grid-template-columns: 150px 1fr;
 }
 
 .about-company h2 {
@@ -41,6 +43,8 @@
   }
 
   @media (max-width: $mobile-size-max) {
+    margin-bottom: 14px;
+
     font-size: 28px;
     line-height: 40px;
   }
@@ -76,7 +80,7 @@
   margin-bottom: 33px;
 
   @media (max-width: $tablet-size-max) {
-    min-width: 500px;
+    min-width: 495px;
     margin-bottom: 8px;
   }
 
