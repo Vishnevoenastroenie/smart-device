@@ -145,31 +145,30 @@
       </section>
 
       <section class="about-company">
-        <div class="container about-company__container">
-          <img class="about-company__image" src="img/year.png" width="150" height="320" aria-hidden="true" alt="Две тысячи двадцать второй год.">
+        <div class="container about-company__container" data-accordion="parent">
+          <img class="about-company__image" src="img/year-works.png" srcset="img/year-works@2x.png 2x" width="150" height="320" aria-hidden="true" alt="Две тысячи двадцать второй год.">
 
-          <div class="about-company__description" data-expandable>
-            <h2>О компании</h2>
+          <div class="about-company__description" data-accordion="element">
+            <h2>О&nbsp;компании</h2>
 
             <div class="about-company__description-text">
               <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до&nbsp;10&nbsp;дней.
               </p>
 
-              <p>Наши поставщики&nbsp;&mdash;мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-                <span>Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
+              <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
+                <span data-accordion="element-mobile">Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
               </p>
 
-              <p data-expandable-item>Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.
-              </p>
+              <div class="about-company__text-hidden" data-accordion="content">
+                <p>Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.
+                </p>
 
-              <p data-expandable-item>Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании.Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов.
-              </p>
+                <p>Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании.Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов.
+                </p>
+              </div>
             </div>
 
-            <button class="about-company__btn btn" type="button" data-expandable-button>
-              <span data-expandable-button-folded>Подробнее</span>
-              <span data-expandable-button-expanded>Свернуть</span>
-            </button>
+            <button class="about-company__btn btn" type="button" data-accordion="button">Подробнее</button>
           </div>
         </div>
       </section>

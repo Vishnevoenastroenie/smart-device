@@ -2,6 +2,7 @@
 
 .advantages {
   margin-bottom: 120px;
+  margin-left: 10px;
 
   @media (max-width: $tablet-size-max) {
     margin-bottom: 75px;
@@ -20,10 +21,14 @@
   grid-template-rows: repeat(2, 1fr);
 
   @media (max-width: $tablet-size-max) {
+    margin-left: -10px;
+
     gap: 29px;
   }
 
   @media (max-width: $mobile-size-max) {
+    margin-left: -10px;
+
     grid-template-columns: none;
     grid-template-rows: auto;
   }

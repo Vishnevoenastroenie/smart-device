@@ -146,4 +146,13 @@
   @media (max-width: $tablet-size-max) {
     display: none;
   }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:disabled {
+    color: $color-cerulean;
+
+    border: 1px solid $color-cerulean;
+  }
 }
