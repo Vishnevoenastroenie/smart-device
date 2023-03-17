@@ -1,7 +1,7 @@
 @import "../variables";
 
 .about-company {
-  margin-bottom: 100px;
+  margin-bottom: 99px;
 
   @media (max-width: $tablet-size-max) {
     margin-bottom: 70px;
@@ -27,8 +27,12 @@
 .about-company__container {
   display: grid;
 
-  gap: 25px;
+  gap: 108px;
   grid-template-columns: 150px 1fr;
+
+  @media (max-width: $tablet-size-max) {
+    gap: 25px;
+  }
 }
 
 .about-company h2 {

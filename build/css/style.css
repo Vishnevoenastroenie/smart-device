@@ -1564,7 +1564,7 @@ button,
 }
 
 .about-company {
-  margin-bottom: 100px;
+  margin-bottom: 99px;
 }
 
 .about-company__image {
@@ -1577,7 +1577,7 @@ button,
 .about-company__container {
   display: -ms-grid;
   display: grid;
-  gap: 25px;
+  gap: 108px;
   -ms-grid-columns: 150px 1fr;
   grid-template-columns: 150px 1fr;
 }
@@ -1651,7 +1651,7 @@ button,
 
 .products {
   padding-top: 65px;
-  padding-bottom: 142px;
+  padding-bottom: 140px;
   background-color: #041827;
 }
 
@@ -1704,14 +1704,14 @@ button,
 
 .products__image-wrapper img {
   width: 100%;
-  min-width: 670px;
+  min-width: 350px;
   -o-object-fit: contain;
   object-fit: contain;
 }
 
 .products__icon {
   position: absolute;
-  right: -18px;
+  right: -2px;
   bottom: 0;
 }
 
@@ -1900,6 +1900,10 @@ button,
     margin-left: -4px;
   }
 
+  .about-company__container {
+    gap: 25px;
+  }
+
   .about-company h2 {
     margin-bottom: 12px;
   }
@@ -1940,6 +1944,16 @@ button,
 
   .products__card h3 {
     padding: 37px 45px 0 45px;
+  }
+
+  .products__image-wrapper img {
+    min-width: 670px;
+  }
+
+  .products__icon {
+    position: absolute;
+    right: -18px;
+    bottom: 0;
   }
 }
 

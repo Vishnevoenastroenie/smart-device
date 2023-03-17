@@ -4,9 +4,11 @@ const accordionButton = aboutCompanyParent.querySelector('[data-accordion="butto
 
 const accordionButtonToggler = () => {
   if (!accordionElement.classList.contains('is-active')) {
-    accordionButton.textContent = 'подробнее';
-  } else {
+    accordionElement.classList.add('is-active');
     accordionButton.textContent = 'свернуть';
+  } else {
+    accordionElement.classList.remove('is-active');
+    accordionButton.textContent = 'подробнее';
   }
 };
 
