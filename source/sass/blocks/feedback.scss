@@ -1,5 +1,136 @@
 @import "../variables";
 
 .feedback {
-  background-color: $color-deep-sky-blue; // Потом градиент
+  position: relative;
+
+  background-color: $color-deep-sky-blue;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    display: block;
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(139deg, rgba(4, 24, 39, 0.5) 0 47.9%, #00b3ff 33.9% 100%);
+    background-color: $color-black-pearl;
+    opacity: 0.5;
+  }
+
+  @media (max-width: $tablet-size-max) {
+    &::before {
+      display: none;
+
+      background-color: transparent;
+    }
+  }
+}
+
+.feedback__container {
+  position: relative;
+
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 165px;
+  padding-bottom: 238px;
+
+  h2 {
+    margin: 0 0 12px;
+
+    font-size: 36px;
+    line-height: 51px;
+    font-family: $ff-roboto-condensed;
+    color: $color-default-white;
+
+    @media (max-width: $tablet-size-max) {
+      margin-bottom: 7px;
+    }
+
+    @media (max-width: $mobile-size-max) {
+      font-size: 30px;
+      line-height: 42.19px;
+    }
+  }
+
+  p {
+    margin: 0 0 36px;
+    padding-left: 5px;
+
+    line-height: 21px;
+    font-family: $ff-pt-mono;
+    color: $color-default-white;
+
+    @media (max-width: $tablet-size-max) {
+      margin-bottom: 26px;
+      padding-left: 0;
+    }
+
+    @media (max-width: $mobile-size-max) {
+      margin-bottom: 35px;
+
+      font-size: 14px;
+      line-height: 18.82px;
+    }
+  }
+
+  @media (max-width: $tablet-size-max) {
+    display: block;
+    padding-top: 45px;
+    padding-bottom: 113px;
+  }
+
+  @media (max-width: $mobile-size-max) {
+    padding-top: 46px;
+    padding-bottom: 89px;
+  }
+}
+
+.feedback__form {
+  @media (max-width: $tablet-size-max) {
+    padding-right: 0;
+  }
+}
+
+.feedback__image {
+  position: absolute;
+  top: 245px;
+  left: 39px;
+  z-index: 1;
+
+  min-width: 510px;
+
+  @media (max-width: $desktop-size-max) {
+    top: 246px;
+    left: 33px;
+
+    width: 350px;
+  }
+
+  @media (max-width: $tablet-size-max) {
+    display: none;
+  }
+}
+
+.feedback__form-container {
+  display: grid;
+  padding-left: 5px;
+
+  grid-gap: 20px 30px;
+  grid-template-columns: 275px 275px;
+
+  @media (max-width: $tablet-size-max) {
+    padding-left: 0;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: $mobile-size-max) {
+    display: grid;
+
+    grid-template-columns: 1fr;
+  }
 }
