@@ -1,5 +1,32 @@
 @import "../variables";
 
 .social-list {
-  background-color: $color-black-pearl; // Потом убрать
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 215px;
+  padding-left: 15px;
+
+  column-gap: 25px;
+
+  @media (max-width: $tablet-size-max) {
+    max-width: 150px;
+    margin-right: 25px;
+    padding-top: 10px;
+    padding-left: 0;
+  }
+
+  @media (max-width: $mobile-size-max) {
+    margin-right: 0;
+  }
+}
+
+.social-list__link svg {
+  &:hover,
+  &:focus {
+    color: $color-deep-sky-blue;
+  }
+
+  &:active {
+    color: $color-picton-blue;
+  }
 }
