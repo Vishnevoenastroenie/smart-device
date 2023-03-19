@@ -1,0 +1,21 @@
+
+/* stylelint-disable */
+[data-accordion="element"].is-active > [data-accordion="content"] {
+  max-height: 100%;
+}
+
+[data-accordion="parent"].no-transition [data-accordion="content"] {
+  -webkit-transition: none;
+       -o-transition: none;
+          transition: none;
+}
+
+[data-accordion="content"] {
+  max-height: 0;
+  overflow: hidden;
+
+  -webkit-transition: max-height 0.3s;
+       -o-transition: max-height 0.3s;
+          transition: max-height 0.3s;
+}
+/* stylelint-enable */

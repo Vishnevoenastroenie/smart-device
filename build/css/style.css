@@ -1647,24 +1647,6 @@ button,
   transition: max-height 0.3s;
 }
 
-[data-accordion=element].is-active > [data-accordion=content] {
-  max-height: 100%;
-}
-
-[data-accordion=parent].no-transition [data-accordion=content] {
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
-}
-
-[data-accordion=content] {
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 0.3s;
-  -o-transition: max-height 0.3s;
-  transition: max-height 0.3s;
-}
-
 /* stylelint-enable */
 
 .products {
@@ -2034,7 +2016,7 @@ button,
 .footer__navigation,
 .footer__address-wrapper {
   position: relative;
-  padding-top: 7px;
+  padding-top: 8px;
 }
 
 .footer__navigation h4,
@@ -2086,6 +2068,10 @@ button,
   -webkit-column-gap: 30px;
   -moz-column-gap: 30px;
   column-gap: 30px;
+}
+
+.middle-column {
+  margin-top: 36px;
 }
 
 .footer__navigation-link {
@@ -2497,6 +2483,10 @@ button,
     width: auto;
   }
 
+  .middle-column {
+    margin: 0;
+  }
+
   .social-list {
     max-width: 150px;
     margin-right: 25px;
@@ -2793,6 +2783,10 @@ button,
     display: none;
   }
 
+  .footer__accordion-item > ul {
+    display: none;
+  }
+
   .footer__navigation h4,
   .footer__address-wrapper h4 {
     margin-bottom: 0;
@@ -2868,26 +2862,41 @@ button,
     background-color: transparent;
     border: none;
     cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 
-  .footer__btn::after,
-  .footer__btn::before {
+  .footer__btn::before,
+  .footer__btn::after {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 22px;
+    right: 8px;
+    display: block;
     width: 15px;
     height: 1px;
-    background-color: #f2f5f6;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    background-color: #c4c4c4;
   }
 
-  .footer__btn::before {
-    -webkit-transform: translate(-50%, -50%) rotate(90deg);
-    -ms-transform: translate(-50%, -50%) rotate(90deg);
-    transform: translate(-50%, -50%) rotate(90deg);
+  .footer__btn::after {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  .no-js button::before,
+  ::after {
+    display: none;
+  }
+
+  .footer__btn.is-active {
+    cursor: pointer;
+  }
+
+  .footer__btn.is-active::after {
+    display: none;
   }
 
   .social-list {

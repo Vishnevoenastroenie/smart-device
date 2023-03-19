@@ -2,12 +2,13 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {showsButtonDetails} from './modules/about-company-toggler/about-company-toggler';
-import {initAccordeon} from './modules/footer-accordion/footer-accordion';
+import './modules/footer-accordion/accordions';
+import {initAccordions} from './modules/footer-accordion/init-accordion';
 
 // ---------------------------------
 window.addEventListener('DOMContentLoaded', () => {
   showsButtonDetails();
-  initAccordeon();
+  initAccordions();
   // Utils
   // ---------------------------------
 
