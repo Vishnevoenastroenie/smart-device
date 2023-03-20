@@ -13,6 +13,8 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
+  color: $color-default-white;
+
   background-color: rgba($color-default-black, 0.8);
   transform: scale(1.2);
   visibility: hidden;
@@ -47,46 +49,6 @@
     padding: 60px 40px;
   }
 
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    cursor: pointer;
-  }
-
-  &__content {
-    @include vp-767 {
-      width: 100%;
-      padding: 20px;
-    }
-
-    position: relative;
-
-    width: 600px;
-    padding: 40px;
-
-    background-color: $color-default-white;
-  }
-
-  &__close-btn {
-    position: absolute;
-    top: 22px;
-    right: 22px;
-    z-index: 1;
-
-    width: 40px;
-    height: 40px;
-    padding: 0;
-
-    background: $color-transparent;
-    border: none;
-    cursor: pointer;
-  }
-
   &--responsive {
     .modal__content {
       width: 100%;
@@ -117,5 +79,215 @@
     opacity: 1;
 
     pointer-events: auto;
+  }
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  cursor: pointer;
+}
+
+.modal__content {
+  @include vp-767 {
+    width: 100%;
+    padding: 20px;
+  }
+
+  position: relative;
+
+  width: 500px;
+  height: 610px;
+  margin: 0 auto;
+  margin-top: -45px;
+  padding: 40px;
+  padding-top: 36px;
+  padding-bottom: 15px;
+
+  background-color: $color-deep-sky-blue;
+  border-radius: 3px;
+  transform: translateX(-8px);
+}
+
+.modal__heading-wrapper {
+  font-size: 16px;
+  line-height: 21.5px;
+  font-family: $ff-pt-mono;
+}
+
+.callback-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.modal h3 {
+  margin: 0 0 4px;
+
+  font-size: 30px;
+  line-height: 42.19px;
+}
+
+.modal p {
+  margin: 0 0 39px;
+  padding-right: 25px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.5px;
+  font-family: $ff-pt-mono;
+
+  transform: translateY(-10px);
+}
+
+.custom-input {
+  display: grid;
+
+  & input:not([type="checkbox"]),
+  & textarea {
+    width: 100%;
+
+    font-family: $ff-pt-mono;
+    color: $color-alice-blue;
+
+    background-color: $color-pacific-blue;
+    border: none;
+    border-radius: 3px;
+
+    &:hover,
+    &:focus {
+      background-color: $color-cerulean;
+      box-shadow: 0 0 0 2px $color-java;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  & input:not([type="checkbox"]) {
+    padding: 15px;
+  }
+
+  & textarea {
+    width: 100%;
+    padding: 25px 15px 25px 15px;
+  }
+
+  &--name {
+    width: 100%;
+    margin-bottom: 20px;
+
+    transform: translateY(-11px);
+
+    grid-area: username;
+  }
+
+  &--phone {
+    max-width: 100%;
+    margin-bottom: 20px;
+
+    transform: translateY(-9px);
+
+    grid-area: userphone;
+  }
+}
+
+.custom-textarea {
+  margin-bottom: 2px;
+}
+
+.custom-toggle {
+  padding: 0 10px;
+
+  font-size: 14px;
+  line-height: 15.58px;
+  font-family: $ff-pt-mono;
+
+  span::before {
+    top: 0;
+  }
+}
+
+.btn-callback {
+  max-width: unset;
+  margin-bottom: 20px;
+  padding: 13px;
+  padding-bottom: 11px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  background-color: $color-black-pearl;
+  border: none;
+  border-radius: 3px;
+  transform: translateY(-17px);
+
+  grid-area: button;
+
+  &:hover,
+  &:focus {
+    color: $color-black-pearl-second;
+
+    background-color: $color-default-white;
+  }
+
+  &:active {
+    background-color: $color-silver;
+  }
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  z-index: 1;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  background: $color-transparent;
+  border: none;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    &::after,
+    &::before {
+      background-color: $color-black-pearl;
+    }
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 47%;
+    left: 17%;
+
+    display: block;
+    width: 28px;
+    height: 1px;
+
+    background-color: $color-default-white;
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
   }
 }

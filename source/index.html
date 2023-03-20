@@ -364,7 +364,7 @@
                 <span class="visually-hidden">Свернуть / Развернуть меню.</span>
               </button>
 
-              <div class="accordion__content" data-accordion="content">
+              <div data-accordion="content">
                 <address class="footer__address">
                   <span class="footer__location">г.&nbsp;Мытищи, Олимпийский проспект, д.10</span>
                   <a class="footer__phone footer__navigation-link oll-links" href="tel:+74955894050">+7&nbsp;(495)&nbsp;589-40-50</a>
@@ -384,24 +384,43 @@
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content">
-        <h3>Закажите звонок</h3>
-        <p class="modal__description">Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
 
-        <form class="modal__form form" action="https://echo.htmlacademy.ru" method="get" autocomplete="off">
-          <div class="modal__inputs form__input">
-            <label class="visually-hidden" for="your-name">Ваше имя:</label>
-            <input id="your-name" type="text" autofocus placeholder="Имя" name="name" aria-label="Ваше имя." minlength="2" maxlength="25" data-modal-name required>
-            <label class=" visually-hidden" for="modal-callback-tel">Ваш телефон:</label>
-            <input type="tel" name="tel" id="modal-callback-tel" minlength="10" pattern="[\+]\d{1}[\s][\(]\d{3}[\)][\s]\d{3}[\s]\d{4}" placeholder="Телефон" required>
-            <textarea placeholder="Ваш вопрос" name="user-question" aria-label="Задайте ваш вопрос"></textarea>
-          </div>
-          <label class="form__checkbox form__check">
-            <input class="form__checkbox-input" type="checkbox" aria-label="Поставьте галочку, если согласны на обработку персональных данных." required>
-            <span>Я согласен на обработку персональных данных</span>
-          </label>
-          <button class="modal__button form__button" type="submit">Отправить</button>
-        </form>
+        <div class="modal__heading-wrapper">
+          <h3>Закажите звонок</h3>
+          <p class="modal__description">Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+        </div>
 
+        <div data-form-validate data-callback="base">
+          <form class="callback-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="modal__input-wrapper">
+              <div class="custom-input custom-input--name">
+                <label data-validate-type="text" data-limitation="name" data-required data-message-base="Поле обязательно к заполнению">
+                  <input type="text" name="name" placeholder="Имя" required>
+                  <span class="visually-hidden">Ваше имя.</span>
+                </label>
+              </div>
+              <div class="custom-input custom-input--phone" data-validate-type="phone" data-on-input-validate data-required>
+                <label data-validate-type="phone" data-required data-message-base="Поле обязательно к заполнению">
+                  <input type="tel" name="phone-number" placeholder="Телефон" required>
+                  <span class="visually-hidden">Ваш номер телефона.</span>
+                </label>
+              </div>
+              <div class="custom-textarea" data-validate-type="text">
+                <label>
+                  <textarea name="question" placeholder="Ваш вопрос" rows="5"></textarea>
+                  <span class="visually-hidden">Ваш вопрос.</span>
+                </label>
+              </div>
+              <button class="btn btn-callback" type="submit">Отправить</button>
+              <div class="custom-toggle custom-toggle--callback">
+                <label data-validate-type="checkbox" data-required>
+                  <input type="checkbox" name="agreement" required checked>
+                  <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
         <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап." data-close-modal>
           <svg width="20" height="20" viewbox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.177086 1.03109C-0.0587882 0.795211 -0.0587881 0.412781 0.177087 0.176905C0.412961 -0.0589705 0.79539 -0.0589706 1.03126 0.176905L10.0001 9.14577L18.9689 0.17691C19.2048 -0.0589653 19.5872 -0.0589653 19.8231 0.176911C20.059 0.412786 20.059 0.795217 19.8231 1.03109L10.8543 9.99996L19.8232 18.9689C20.0591 19.2048 20.0591 19.5872 19.8232 19.8231C19.5873 20.059 19.2049 20.059 18.969 19.8231L10.0001 10.8541L1.03118 19.8231C0.795303 20.059 0.412874 20.059 0.176999 19.8231C-0.0588753 19.5872 -0.0588755 19.2048 0.176999 18.9689L9.14592 9.99996L0.177086 1.03109Z" />
