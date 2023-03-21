@@ -94,6 +94,7 @@
   align-items: center;
 
   line-height: 18px;
+  color: $color-deep-sky-blue;
 
   @media (max-width: $tablet-size-max) {
     padding: 30px 17px 50px;
@@ -105,10 +106,32 @@
 
   &:hover,
   &:focus {
+    color: $color-deep-sky-blue;
+
     opacity: 0.8;
   }
 
   &:active {
+    color: $color-cerulean;
+
+    opacity: 0.3;
+  }
+}
+
+.header__link svg,
+.header__link-text {
+  color: $color-deep-sky-blue;
+
+  &:hover,
+  &:focus {
+    color: $color-deep-sky-blue;
+
+    opacity: 0.8;
+  }
+
+  &:active {
+    color: $color-cerulean;
+
     opacity: 0.3;
   }
 }

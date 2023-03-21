@@ -115,6 +115,30 @@
 
   user-select: none;
 
+  &:hover,
+  &:focus {
+    color: $color-deep-sky-blue;
+
+    background-color: $color-alice-blue-second;
+    opacity: 0.8;
+  }
+
+  &:active {
+    color: $color-cerulean;
+
+    background-color: $color-alice-blue-second;
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    color: $color-barossa;
+
+    background-color: $color-silver;
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
   @media (max-width: $tablet-size-max) {
     margin-left: 45px;
   }
