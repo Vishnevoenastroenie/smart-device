@@ -42,7 +42,7 @@
 
     display: flex;
     flex-shrink: 0;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     min-height: 100%;
@@ -124,19 +124,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  gap: 20px;
 }
 
 .modal h3 {
-  margin: 0 0 4px;
+  margin: 0 0 15px;
 
   font-size: 30px;
   line-height: 42.19px;
+  font-family: $ff-roboto-condensed;
 }
 
 .modal p {
-  margin: 0 0 39px;
+  margin: 0 0 40px 0;
   padding-right: 25px;
 
   font-weight: 400;
@@ -147,12 +146,12 @@
   transform: translateY(-10px);
 }
 
-.custom-input {
-  display: grid;
-
+.custom-input,
+.custom-textarea {
   & input:not([type="checkbox"]),
   & textarea {
     width: 100%;
+    min-width: 420px;
 
     font-family: $ff-pt-mono;
     color: $color-alice-blue;
@@ -205,6 +204,8 @@
 }
 
 .custom-textarea {
+  min-width: 420px;
+  min-height: 155px;
   margin-bottom: 2px;
 }
 
@@ -222,14 +223,14 @@
 
 .btn-callback {
   max-width: unset;
+  margin-top: 33px;
   margin-bottom: 20px;
-  padding: 13px;
+  padding: 14px 163px 11px;
   padding-bottom: 11px;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
 
   background-color: $color-black-pearl;
@@ -261,6 +262,8 @@
   height: 40px;
   padding: 0;
 
+  color: $color-default-white;
+
   background: $color-transparent;
   border: none;
   cursor: pointer;
@@ -269,7 +272,7 @@
   &:hover {
     &::after,
     &::before {
-      background-color: $color-black-pearl;
+      background-color: $color-silver;
     }
   }
 
@@ -284,11 +287,40 @@
     width: 28px;
     height: 1px;
 
-    background-color: $color-default-white;
+    background-color: $color-silver;
     transform: rotate(45deg);
   }
 
   &::before {
+    transform: rotate(-45deg);
+  }
+}
+
+.input-agreement span {
+  padding-left: 7px;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "PT Mono", "Courier New", monospace;
+  color: $color-default-white;
+
+  transform: translateY(-30px);
+  opacity: 0.8;
+}
+
+.input-agreement {
+  &::after {
+    position: absolute;
+    top: 13%;
+    left: 12%;
+
+    display: block;
+    width: 7px;
+    height: 5px;
+
+    border: 1px solid $color-default-white;
+    border-top: none;
+    border-right: none;
     transform: rotate(-45deg);
   }
 }

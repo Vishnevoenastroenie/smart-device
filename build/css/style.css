@@ -738,9 +738,8 @@ button,
   display: flex;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -820,17 +819,17 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 20px;
 }
 
 .modal h3 {
-  margin: 0 0 4px;
+  margin: 0 0 15px;
   font-size: 30px;
   line-height: 42.19px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
 }
 
 .modal p {
-  margin: 0 0 39px;
+  margin: 0 0 40px 0;
   padding-right: 25px;
   font-weight: 400;
   font-size: 16px;
@@ -841,14 +840,12 @@ button,
   transform: translateY(-10px);
 }
 
-.custom-input {
-  display: -ms-grid;
-  display: grid;
-}
-
 .custom-input input:not([type=checkbox]),
-.custom-input textarea {
+.custom-input textarea,
+.custom-textarea input:not([type=checkbox]),
+.custom-textarea textarea {
   width: 100%;
+  min-width: 420px;
   font-family: "PT Mono", "Arial", sans-serif;
   color: #f2f5f6;
   background-color: #019bdf;
@@ -859,52 +856,71 @@ button,
 .custom-input input:not([type=checkbox]):hover,
 .custom-input input:not([type=checkbox]):focus,
 .custom-input textarea:hover,
-.custom-input textarea:focus {
+.custom-input textarea:focus,
+.custom-textarea input:not([type=checkbox]):hover,
+.custom-textarea input:not([type=checkbox]):focus,
+.custom-textarea textarea:hover,
+.custom-textarea textarea:focus {
   background-color: #026592;
   -webkit-box-shadow: 0 0 0 2px #339a9a;
   box-shadow: 0 0 0 2px #339a9a;
 }
 
 .custom-input input:not([type=checkbox]):active,
-.custom-input textarea:active {
+.custom-input textarea:active,
+.custom-textarea input:not([type=checkbox]):active,
+.custom-textarea textarea:active {
   opacity: 0.5;
 }
 
 .custom-input input:not([type=checkbox])::-webkit-input-placeholder,
-.custom-input textarea::-webkit-input-placeholder {
+.custom-input textarea::-webkit-input-placeholder,
+.custom-textarea input:not([type=checkbox])::-webkit-input-placeholder,
+.custom-textarea textarea::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
 .custom-input input:not([type=checkbox])::-moz-placeholder,
-.custom-input textarea::-moz-placeholder {
+.custom-input textarea::-moz-placeholder,
+.custom-textarea input:not([type=checkbox])::-moz-placeholder,
+.custom-textarea textarea::-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
 .custom-input input:not([type=checkbox]):-ms-input-placeholder,
-.custom-input textarea:-ms-input-placeholder {
+.custom-input textarea:-ms-input-placeholder,
+.custom-textarea input:not([type=checkbox]):-ms-input-placeholder,
+.custom-textarea textarea:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
 .custom-input input:not([type=checkbox])::-ms-input-placeholder,
-.custom-input textarea::-ms-input-placeholder {
+.custom-input textarea::-ms-input-placeholder,
+.custom-textarea input:not([type=checkbox])::-ms-input-placeholder,
+.custom-textarea textarea::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
 .custom-input input:not([type=checkbox])::placeholder,
-.custom-input textarea::placeholder {
+.custom-input textarea::placeholder,
+.custom-textarea input:not([type=checkbox])::placeholder,
+.custom-textarea textarea::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.custom-input input:not([type=checkbox]) {
+.custom-input input:not([type=checkbox]),
+.custom-textarea input:not([type=checkbox]) {
   padding: 15px;
 }
 
-.custom-input textarea {
+.custom-input textarea,
+.custom-textarea textarea {
   width: 100%;
   padding: 25px 15px 25px 15px;
 }
 
-.custom-input--name {
+.custom-input--name,
+.custom-textarea--name {
   width: 100%;
   margin-bottom: 20px;
   -webkit-transform: translateY(-11px);
@@ -913,7 +929,8 @@ button,
   grid-area: username;
 }
 
-.custom-input--phone {
+.custom-input--phone,
+.custom-textarea--phone {
   max-width: 100%;
   margin-bottom: 20px;
   -webkit-transform: translateY(-9px);
@@ -923,6 +940,8 @@ button,
 }
 
 .custom-textarea {
+  min-width: 420px;
+  min-height: 155px;
   margin-bottom: 2px;
 }
 
@@ -939,13 +958,13 @@ button,
 
 .btn-callback {
   max-width: unset;
+  margin-top: 33px;
   margin-bottom: 20px;
-  padding: 13px;
+  padding: 14px 163px 11px;
   padding-bottom: 11px;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
   background-color: #041827;
   border: none;
@@ -974,6 +993,7 @@ button,
   width: 40px;
   height: 40px;
   padding: 0;
+  color: #ffffff;
   background: rgba(255, 255, 255, 0);
   border: none;
   cursor: pointer;
@@ -983,7 +1003,7 @@ button,
 .modal__close-btn:focus::before,
 .modal__close-btn:hover::after,
 .modal__close-btn:hover::before {
-  background-color: #041827;
+  background-color: #c4c4c4;
 }
 
 .modal__close-btn::after,
@@ -995,7 +1015,7 @@ button,
   display: block;
   width: 28px;
   height: 1px;
-  background-color: #ffffff;
+  background-color: #c4c4c4;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -1007,14 +1027,40 @@ button,
   transform: rotate(-45deg);
 }
 
+.input-agreement span {
+  padding-left: 7px;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "PT Mono", "Courier New", monospace;
+  color: #ffffff;
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+  opacity: 0.8;
+}
+
+.input-agreement::after {
+  position: absolute;
+  top: 13%;
+  left: 12%;
+  display: block;
+  width: 7px;
+  height: 5px;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
 .custom-input,
 .custom-textarea {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 530px;
-  padding: 14px 0 28px;
+  min-width: 420px;
 }
 
 .custom-input label,
@@ -1039,25 +1085,10 @@ button,
   min-height: 48px;
   padding: 10px;
   border: 2px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
   outline: none;
   -webkit-transition: border 0.3s ease;
   -o-transition: border 0.3s ease;
   transition: border 0.3s ease;
-}
-
-.custom-input label input:hover,
-.custom-input label textarea:hover,
-.custom-textarea label input:hover,
-.custom-textarea label textarea:hover {
-  border: 2px solid rgba(0, 0, 0, 0.5);
-}
-
-.custom-input label input:focus,
-.custom-input label textarea:focus,
-.custom-textarea label input:focus,
-.custom-textarea label textarea:focus {
-  border: 2px solid rgba(0, 0, 0, 0.8);
 }
 
 .custom-input__error,
@@ -1126,9 +1157,10 @@ button,
   display: flex;
   width: 500px;
   padding: 14px 0 10px 36px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
   line-height: 27px;
+  font-family: "PT Mono", "Arial", sans-serif;
 }
 
 .custom-toggle:last-of-type {

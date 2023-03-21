@@ -7,9 +7,10 @@
   width: 500px;
   padding: 14px 0 10px 36px;
 
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
   line-height: 27px;
+  font-family: $ff-pt-mono;
 
   @media screen and (max-width: 767px) {
     width: 100%;

@@ -395,33 +395,29 @@
 
         <div data-form-validate data-callback="base">
           <form class="callback-form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="modal__input-wrapper">
-              <div class="custom-input custom-input--name">
-                <label data-validate-type="text" data-limitation="name" data-required data-message-base="Поле обязательно к заполнению">
-                  <input type="text" name="name" placeholder="Имя" required>
-                  <span class="visually-hidden">Ваше имя.</span>
-                </label>
-              </div>
-              <div class="custom-input custom-input--phone" data-validate-type="phone" data-on-input-validate data-required>
-                <label data-validate-type="phone" data-required data-message-base="Поле обязательно к заполнению">
-                  <input type="tel" name="phone-number" placeholder="Телефон" data-mask="phone" pattern="[+]7[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" required>
-                  <span class="visually-hidden">Ваш номер телефона.</span>
-                </label>
-              </div>
-              <div class="custom-textarea" data-validate-type="text">
-                <label>
-                  <textarea name="question" placeholder="Ваш вопрос" rows="5"></textarea>
-                  <span class="visually-hidden">Ваш вопрос.</span>
-                </label>
-              </div>
-              <button class="btn btn-callback" type="submit">Отправить</button>
-              <div class="custom-toggle custom-toggle--callback">
-                <label data-validate-type="checkbox" data-required>
-                  <input type="checkbox" name="agreement" required checked>
-                  <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
-                </label>
-              </div>
+            <div class="custom-input custom-input--name">
+              <label data-validate-type="text" data-limitation="name" data-required data-message-base="Поле обязательно к заполнению">
+                <input type="text" name="name" placeholder="Имя" required>
+                <span class="visually-hidden">Ваше имя.</span>
+              </label>
             </div>
+            <div class="custom-input custom-input--phone" data-validate-type="phone" data-on-input-validate data-required>
+              <label data-validate-type="phone" data-required data-message-base="Поле обязательно к заполнению">
+                <input type="tel" name="phone-number" placeholder="Телефон" data-mask="phone" pattern="[+]7[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" required>
+                <span class="visually-hidden">Ваш номер телефона.</span>
+              </label>
+            </div>
+            <div class="custom-textarea" data-validate-type="text">
+              <label>
+                <textarea name="question" placeholder="Ваш вопрос" rows="5"></textarea>
+                <span class="visually-hidden">Ваш вопрос.</span>
+              </label>
+            </div>
+            <button class="btn btn-callback" type="submit">Отправить</button>
+            <label data-validate-type="checkbox" data-required>
+              <input class="input-agreement" type="checkbox" name="agreement" required checked>
+              <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+            </label>
           </form>
         </div>
         <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап." data-close-modal>

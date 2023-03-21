@@ -5,8 +5,7 @@
   position: relative;
 
   display: flex;
-  width: 530px;
-  padding: 14px 0 28px;
+  min-width: 420px;
 
   @media screen and (max-width: 767px) {
     width: 100%;
@@ -31,7 +30,6 @@
       padding: 10px;
 
       border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
       outline: none;
 
       transition: border 0.3s ease;
@@ -39,14 +37,6 @@
       @media screen and (max-width: 767px) {
         width: 100%;
         max-width: unset;
-      }
-
-      &:hover {
-        border: 2px solid rgba(#000000, 0.5);
-      }
-
-      &:focus {
-        border: 2px solid rgba(#000000, 0.8);
       }
     }
   }
