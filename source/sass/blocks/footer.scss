@@ -6,6 +6,8 @@
 
 .footer__container {
   display: flex;
+  justify-content: space-between;
+  max-width: 1320px;
   margin-left: 7px;
   padding: 46px 0;
 
@@ -16,8 +18,10 @@
   }
 
   @media (max-width: $mobile-size-max) {
-    display: block;
-    padding-top: 35px;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 35px 0;
   }
 }
 
@@ -25,22 +29,22 @@
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
-  margin-right: 160px;
+  margin-right: 13%;
 
   @media (max-width: $tablet-size-max) {
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+    margin: 0;
     margin-top: 2px;
-    margin-right: 0;
     margin-bottom: 3px;
-
-    gap: 314px;
   }
 
   @media (max-width: $mobile-size-max) {
     flex-direction: column;
     align-items: center;
     margin-bottom: 22px;
+    padding: 0;
   }
 }
 
@@ -51,6 +55,7 @@
   @media (max-width: $tablet-size-max) {
     width: 215px;
     height: 55px;
+    margin-right: auto;
   }
 
   @media (max-width: $mobile-size-max) {
@@ -107,14 +112,17 @@
 }
 
 .footer__address-wrapper {
-  margin-top: -132px;
-  margin-left: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 345px;
+  margin-left: auto;
 
   @media (max-width: $tablet-size-max) {
-    min-width: 345px;
-    margin-top: -263px;
-    margin-bottom: 85px;
-    margin-left: 350px;
+    min-width: 320px;
+    margin-left: auto;
+
+    //transform: translateX(-12px); Будет не совпадать
   }
 
   @media (max-width: $mobile-size-max) {
@@ -136,15 +144,28 @@
 }
 
 .footer__navigation {
+  display: flex;
   flex-shrink: 0;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-right: 13%;
 
   @media (max-width: $tablet-size-max) {
     display: block;
     width: auto;
+    max-width: 220px;
+    padding-left: 0;
   }
 
   @media (max-width: $mobile-size-max) {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     margin-right: 0;
+    padding: 0 25px;
 
     &::before {
       content: "";
@@ -174,13 +195,8 @@
 }
 
 .footer__navigation-list {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   max-width: 220px;
-
-  columns: 1;
-  column-gap: 30px;
+  margin-right: 13%;
 
   @media (max-width: $mobile-size-max) {
     &:last-of-type {
@@ -189,6 +205,7 @@
   }
 }
 
+/*
 .middle-column {
   margin-top: -137px;
   margin-left: 250px;
@@ -196,7 +213,7 @@
   @media (max-width: $tablet-size-max) {
     margin: 0;
   }
-}
+}*/
 
 .footer__navigation-link {
   display: inline-block;
@@ -295,10 +312,9 @@
     &::after {
       content: "";
       position: absolute;
-      top: 22px;
-      right: 8px;
+      top: 50%;
+      right: 0;
 
-      display: block;
       width: 15px;
       height: 1px;
 
@@ -306,7 +322,9 @@
     }
 
     &::after {
-      transform: rotate(90deg);
+      transform: rotate(-270deg);
+
+      transition: all 0.5s ease-out;
     }
   }
 }

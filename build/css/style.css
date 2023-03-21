@@ -2191,6 +2191,10 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 1320px;
   margin-left: 7px;
   padding: 46px 0;
 }
@@ -2205,7 +2209,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-right: 160px;
+  margin-right: 13%;
 }
 
 .footer__logo {
@@ -2231,16 +2235,6 @@ button,
 }
 
 .footer__address-wrapper {
-  margin-top: -132px;
-  margin-left: 500px;
-}
-
-.footer__navigation {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.footer__navigation-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2250,19 +2244,39 @@ button,
   flex-direction: column;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 220px;
-  -webkit-columns: 1;
-  -moz-columns: 1;
-  columns: 1;
-  -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
+  max-width: 345px;
+  margin-left: auto;
 }
 
+.footer__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 13%;
+}
+
+.footer__navigation-list {
+  max-width: 220px;
+  margin-right: 13%;
+}
+
+/*
 .middle-column {
   margin-top: -137px;
   margin-left: 250px;
-}
+
+  @media (max-width: $tablet-size-max) {
+    margin: 0;
+  }
+}*/
 
 .footer__navigation-link {
   display: inline-block;
@@ -2636,15 +2650,16 @@ button,
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    width: 100%;
+    margin: 0;
     margin-top: 2px;
-    margin-right: 0;
     margin-bottom: 3px;
-    gap: 314px;
   }
 
   .footer__logo {
     width: 215px;
     height: 55px;
+    margin-right: auto;
   }
 
   .footer__navigation,
@@ -2653,19 +2668,15 @@ button,
   }
 
   .footer__address-wrapper {
-    min-width: 345px;
-    margin-top: -263px;
-    margin-bottom: 85px;
-    margin-left: 350px;
+    min-width: 320px;
+    margin-left: auto;
   }
 
   .footer__navigation {
     display: block;
     width: auto;
-  }
-
-  .middle-column {
-    margin: 0;
+    max-width: 220px;
+    padding-left: 0;
   }
 
   .social-list {
@@ -2892,6 +2903,7 @@ button,
   }
 
   .feedback__container {
+    max-width: 270px;
     padding-top: 46px;
     padding-bottom: 89px;
   }
@@ -2932,8 +2944,15 @@ button,
   }
 
   .footer__container {
-    display: block;
-    padding-top: 35px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 35px 0;
   }
 
   .footer__social-container {
@@ -2945,6 +2964,7 @@ button,
     -ms-flex-align: center;
     align-items: center;
     margin-bottom: 22px;
+    padding: 0;
   }
 
   .footer__logo {
@@ -2992,7 +3012,19 @@ button,
   }
 
   .footer__navigation {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
     margin-right: 0;
+    padding: 0 25px;
   }
 
   .footer__navigation::before {
@@ -3055,18 +3087,20 @@ button,
   .footer__btn::after {
     content: "";
     position: absolute;
-    top: 22px;
-    right: 8px;
-    display: block;
+    top: 50%;
+    right: 0;
     width: 15px;
     height: 1px;
     background-color: #c4c4c4;
   }
 
   .footer__btn::after {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+    -webkit-transform: rotate(-270deg);
+    -ms-transform: rotate(-270deg);
+    transform: rotate(-270deg);
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
   }
 
   .no-js button::before,
@@ -3083,7 +3117,10 @@ button,
   }
 
   .social-list {
-    margin-right: 0;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-top: 10px;
   }
 }
 
