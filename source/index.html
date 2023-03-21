@@ -247,16 +247,16 @@
             <form action="https://echo.htmlacademy.ru/" method="get" autocomplete="off">
               <div class="feedback__form-container">
                 <div class="form__input form__input--name">
-                  <label class="visually-hidden" for="name">Ваше имя:</label>
+                  <label class="visually-hidden" for="name" data-message-base="Поле обязательно к заполнению">Ваше имя:</label>
                   <input id="name" type="text" data-validate-type="text" autofocus placeholder="Имя" name="name" aria-label="Ваше имя." minlength="2" maxlength="25" data-modal-name required>
                 </div>
-                <div class="form__input form__input--phone">
-                  <label class=" visually-hidden" for="phone">Ваш телефон:</label>
-                  <input type="tel" name="tel" id="phone" minlength="10" data-mask="phone" pattern="[\+]\d{1}[\s][\(]\d{3}[\)][\s]\d{3}[\s]\d{4}" placeholder="Телефон" required>
+                <div class="form__input form__input--phone" data-validate-type="phone" data-on-input-validate data-required>
+                  <label class="visually-hidden" data-validate-type="phone" data-required data-message-base="Поле обязательно к заполнению" for="phone">Ваш телефон:</label>
+                  <input type="tel" name="tel" id="phone" minlength="10" data-mask="phone" pattern="[+]7[\]\d{3}[\]\d{3}[\]\d{2}[\]\d{2}" placeholder="Телефон" required>
                 </div>
-                <textarea placeholder="Ваш вопрос" name="user-question" aria-label="Задайте ваш вопрос."></textarea>
-                <label class="form__checkbox form__check form__checkbox--consultation">
-                  <input class="form__checkbox-input" type="checkbox" aria-label="Поставьте галочку, если согласны на обработку персональных данных." required>
+                <textarea data-validate-type="text" placeholder="Ваш вопрос" name="user-question" rows="5" aria-label="Задайте ваш вопрос."></textarea>
+                <label class="form__checkbox form__check form__checkbox--consultation" data-validate-type="checkbox" data-required>
+                  <input class="form__checkbox-input" type="checkbox" aria-label="Поставьте галочку, если согласны на обработку персональных данных." required checked>
                   <span></span>
                   Я&nbsp;согласен на&nbsp;обработку<br>персональных данных
                 </label>
@@ -383,7 +383,7 @@
   <div class="modal modal--preload" data-modal="feedback">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
+      <div class="modal__content" data-form-validate>
 
         <div class="modal__heading-wrapper">
           <h3>Закажите звонок</h3>
@@ -394,25 +394,23 @@
           <form class="callback-form" action="https://echo.htmlacademy.ru" method="post">
             <div class="custom-input custom-input--name">
               <label data-validate-type="text" data-limitation="name" data-required data-message-base="Поле обязательно к заполнению">
-                <input type="text" name="name" placeholder="Имя" required>
+                <input type="text" name="name" id="feedback-username" placeholder="Имя" required>
                 <span class="visually-hidden">Ваше имя.</span>
               </label>
             </div>
             <div class="custom-input custom-input--phone" data-validate-type="phone" data-on-input-validate data-required>
-              <label data-validate-type="phone" data-required data-message-base="Поле обязательно к заполнению">
-                <input type="tel" name="phone-number" placeholder="Телефон" data-mask="phone" pattern="[+]7[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" required>
-                <span class="visually-hidden">Ваш номер телефона.</span>
-              </label>
+              <label class="visually-hidden" data-validate-type="phone" data-required data-message-base="Поле обязательно к заполнению" for="phone">Ваш телефон:</label>
+              <input type="tel" name="tel" id="feedback-userphone" minlength="10" data-mask="phone" pattern="[+]7[\]\d{3}[\]\d{3}[\]\d{2}[\]\d{2}" placeholder="Телефон" required>
             </div>
             <div class="custom-textarea" data-validate-type="text">
               <label>
-                <textarea name="question" placeholder="Ваш вопрос" rows="5"></textarea>
+                <textarea name="question" id="feedback-userquestion" placeholder="Ваш вопрос" rows="5"></textarea>
                 <span class="visually-hidden">Ваш вопрос.</span>
               </label>
             </div>
             <button class="btn btn-callback" type="submit">Отправить</button>
             <label data-validate-type="checkbox" data-required>
-              <input class="input-agreement" type="checkbox" name="agreement" required checked>
+              <input class="input-agreement" type="checkbox" name="agreement" id="feedback-agreement" required checked>
               <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
             </label>
           </form>
