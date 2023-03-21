@@ -62,7 +62,7 @@
             </li>
           </ul>
 
-          <a class="header__btn btn" href="#!" data-open-modal="modal">Заказать звонок</a>
+          <a class="header__btn btn" href="#" data-open-modal="feedback">Заказать звонок</a>
         </div>
       </div>
     </header>
@@ -83,8 +83,8 @@
           <div class="main-block__content">
             <h2>Печатные платы</h2>
             <p>Производство и монтаж, &#8239;поставка комплектующих, блоков и модулей</p>
-            <a class="main-block__button main-block__button--desctablet btn" data-anchor href="#consultation">Получить бесплатную консультацию</a>
-            <a class="main-block__button main-block__button--mobile btn" data-anchor href="#consultation">Бесплатная консультация</a>
+            <a class="main-block__button main-block__button--desctablet btn" data-anchor href="#form">Получить бесплатную консультацию</a>
+            <a class="main-block__button main-block__button--mobile btn" data-anchor href="#form">Бесплатная консультация</a>
           </div>
         </div>
       </section>
@@ -237,9 +237,9 @@
         </div>
       </section>
 
-      <section class="feedback" id="feedback">
+      <section class="feedback" id="form">
         <div class="container feedback__container">
-          <div class="feedback__form form" data-form-validate>
+          <div class="feedback__form form" data-form-validate data-callback="base">
             <picture class="feedback__image-wrapper">
               <img class="feedback__image" src="img/paper-airplane.png" srcset="img/paper-airplane@2x.png 2x" width="510" height="285" aria-hidden="true" alt="Бумажный самолёт.">
             </picture>
@@ -251,7 +251,7 @@
               <div class="feedback__form-container">
                 <div class="form__input form__input--name">
                   <label class="visually-hidden" for="name">Ваше имя:</label>
-                  <input id="name" type="text" autofocus placeholder="Имя" name="name" aria-label="Ваше имя." minlength="2" maxlength="25" data-modal-name required>
+                  <input id="name" type="text" data-validate-type="text" autofocus placeholder="Имя" name="name" aria-label="Ваше имя." minlength="2" maxlength="25" data-modal-name required>
                 </div>
                 <div class="form__input form__input--phone">
                   <label class=" visually-hidden" for="phone">Ваш телефон:</label>
