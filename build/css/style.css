@@ -1678,6 +1678,7 @@ button,
 }
 
 .main-block__button {
+  display: inline-block;
   margin: 0;
   padding: 15px 26px 19px;
   font-weight: 700;
@@ -1690,6 +1691,10 @@ button,
   background-color: #00b2ff;
   border: none;
   border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .main-block__button--mobile {

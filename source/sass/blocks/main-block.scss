@@ -97,6 +97,7 @@
 }
 
 .main-block__button {
+  display: inline-block;
   margin: 0;
   padding: 15px 26px 19px;
 
@@ -111,6 +112,8 @@
   background-color: $color-deep-sky-blue;
   border: none;
   border-radius: 3px;
+
+  user-select: none;
 
   @media (max-width: $tablet-size-max) {
     margin-left: 45px;

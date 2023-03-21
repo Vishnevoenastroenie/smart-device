@@ -4,11 +4,13 @@ import {Form} from './modules/form-validate/form';
 import {showsButtonDetails} from './modules/about-company-toggler/about-company-toggler';
 import './modules/footer-accordion/accordions';
 import {initAccordions} from './modules/footer-accordion/init-accordion';
+import {addMaskPhone} from './modules/mask/mask';
 
 // ---------------------------------
 window.addEventListener('DOMContentLoaded', () => {
   showsButtonDetails();
   initAccordions();
+  addMaskPhone();
   // Utils
   // ---------------------------------
 
