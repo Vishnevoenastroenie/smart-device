@@ -299,16 +299,16 @@
 .input-agreement span {
   padding-left: 7px;
 
+  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   font-family: "PT Mono", "Courier New", monospace;
   color: $color-default-white;
 
-  transform: translateY(-30px);
   opacity: 0.8;
 }
 
-.input-agreement {
+.input-agreement input[type="checkbox"] ~ span {
   &::after {
     position: absolute;
     top: 13%;
@@ -318,9 +318,27 @@
     width: 7px;
     height: 5px;
 
+    background-color: transparent;
     border: 1px solid $color-default-white;
     border-top: none;
     border-right: none;
     transform: rotate(-45deg);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border-color: $color-neon-blue;
+    }
+
+    &:active {
+      border-color: $color-picton-blue;
+      opacity: 0.5;
+    }
+  }
+
+  &:checked {
+    background-color: $color-deep-sky-blue;
+    border-color: $color-default-white;
   }
 }

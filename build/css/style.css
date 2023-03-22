@@ -1029,29 +1029,45 @@ button,
 
 .input-agreement span {
   padding-left: 7px;
+  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   font-family: "PT Mono", "Courier New", monospace;
   color: #ffffff;
-  -webkit-transform: translateY(-30px);
-  -ms-transform: translateY(-30px);
-  transform: translateY(-30px);
   opacity: 0.8;
 }
 
-.input-agreement::after {
+.input-agreement input[type=checkbox] ~ span::after {
   position: absolute;
   top: 13%;
   left: 12%;
   display: block;
   width: 7px;
   height: 5px;
+  background-color: transparent;
   border: 1px solid #ffffff;
   border-top: none;
   border-right: none;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
+  cursor: pointer;
+}
+
+.input-agreement input[type=checkbox] ~ span::after:hover,
+.input-agreement input[type=checkbox] ~ span::after:focus {
+  background-color: transparent;
+  border-color: #2c39f2;
+}
+
+.input-agreement input[type=checkbox] ~ span::after:active {
+  border-color: #72a0ca;
+  opacity: 0.5;
+}
+
+.input-agreement input[type=checkbox] ~ span:checked {
+  background-color: #00b2ff;
+  border-color: #ffffff;
 }
 
 .custom-input,
@@ -2202,6 +2218,7 @@ button,
 }
 
 .form__checkbox span:active {
+  border-color: #72a0ca;
   opacity: 0.5;
 }
 
@@ -2219,6 +2236,7 @@ button,
 
 .form__checkbox input[type=checkbox]:checked ~ span {
   position: relative;
+  display: block;
   width: 7px;
   height: 5px;
   border: 1px solid #ffffff;
@@ -2232,8 +2250,15 @@ button,
 .form__checkbox:hover span,
 .form__checkbox input[type=checkbox]:focus ~ span {
   background-color: #72a0ca;
-  -webkit-box-shadow: 0 0 0 2px #2c39f2;
-  box-shadow: 0 0 0 2px #2c39f2;
+  -webkit-box-shadow: 0 0 0 1px #2c39f2;
+  box-shadow: 0 0 0 1px #2c39f2;
+}
+
+.form__checkbox:active span,
+.form__checkbox input[type=checkbox]:disabled ~ span {
+  background-color: #3c3639;
+  -webkit-box-shadow: 0 0 0 3px #339a9a;
+  box-shadow: 0 0 0 3px #339a9a;
 }
 
 .form__checkbox--consultation {

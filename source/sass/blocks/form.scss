@@ -136,6 +136,7 @@
   }
 
   &:active {
+    border-color: $color-picton-blue;
     opacity: 0.5;
   }
 }
@@ -158,6 +159,7 @@
 .form__checkbox input[type="checkbox"]:checked ~ span {
   position: relative;
 
+  display: block;
   width: 7px;
   height: 5px;
 
@@ -170,7 +172,13 @@
 .form__checkbox:hover span,
 .form__checkbox input[type="checkbox"]:focus ~ span {
   background-color: $color-picton-blue;
-  box-shadow: 0 0 0 2px $color-neon-blue;
+  box-shadow: 0 0 0 1px $color-neon-blue;
+}
+
+.form__checkbox:active span,
+.form__checkbox input[type="checkbox"]:disabled ~ span {
+  background-color: $color-barossa;
+  box-shadow: 0 0 0 3px $color-java;
 }
 
 .form__checkbox--consultation {
