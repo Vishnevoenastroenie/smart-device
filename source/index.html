@@ -250,13 +250,13 @@
                   <label class="visually-hidden" for="name" data-message-base="Поле обязательно к заполнению">Ваше имя:</label>
                   <input id="name" type="text" data-validate-type="text" autofocus placeholder="Имя" name="name" aria-label="Ваше имя." minlength="2" maxlength="25" data-modal-name required>
                 </div>
-                <div class="form__input form__input--phone" data-validate-type="phone" data-on-input-validate data-required>
-                  <label class="visually-hidden" data-validate-type="phone" data-required data-message-base="Поле обязательно к заполнению" for="phone">Ваш телефон:</label>
-                  <input type="tel" name="tel" id="phone" minlength="10" data-mask="phone" pattern="[+]7[\]\d{3}[\]\d{3}[\]\d{2}[\]\d{2}" placeholder="Телефон" required>
+                <div class="form__input form__input--phone" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required>
+                  <label class="visually-hidden" for="phone">Ваш телефон:</label>
+                  <input type="tel" name="tel" id="phone" minlength="10" data-mask="phone" placeholder="Телефон">
                 </div>
                 <textarea data-validate-type="text" placeholder="Ваш вопрос" name="user-question" rows="5" aria-label="Задайте ваш вопрос."></textarea>
                 <label class="form__checkbox form__check form__checkbox--consultation" data-validate-type="checkbox" data-required>
-                  <input class="form__checkbox-input" type="checkbox" aria-label="Поставьте галочку, если согласны на обработку персональных данных." required checked>
+                  <input class="form__checkbox-input" data-validate-type="checkbox" type="checkbox" aria-label="Поставьте галочку, если согласны на обработку персональных данных." required checked>
                   <span></span>
                   Я&nbsp;согласен на&nbsp;обработку<br>персональных данных
                 </label>
@@ -308,69 +308,37 @@
             </ul>
           </div>
 
-          <div data-accordion="parent" data-single="" data-destroy="(max-width: 767px)">
-            <nav class="footer__navigation no-js">
-              <div class="footer__accordion-item " data-accordion="element">
+          <div lass="footer__accordion" data-accordion="parent" data-single="" data-destroy="(max-width: 767px)">
+            <div class="footer__accordion-element" data-accordion="element">
+              <button class="footer__btn-accordion" type="button" data-accordion="button" tabindex="-1">
+                Разделы сайта
+              </button>
 
-                <h4>Разделы сайта</h4>
-
-                <button class="footer__btn" type="button" data-accordion="button">
-                  <span class="visually-hidden">Свернуть / Развернуть меню.</span>
-                </button>
-
-                <div data-accordion="content">
-                  <ul class="footer__navigation-list list-reset">
-                    <li class="footer__navigation-item">
-                      <a class="footer__navigation-link oll-links" href="#">О Компании</a>
-                    </li>
-
-                    <li class="footer__navigation-item">
-                      <a class="footer__navigation-link oll-links" href="#">Продукты</a>
-                    </li>
-
-                    <li class="footer__navigation-item">
-                      <a class="footer__navigation-link oll-links" href="#">Производство&#8239;печатных плат</a>
-                    </li>
-
-                    <li class="footer__navigation-item">
-                      <a class="footer__navigation-link oll-links" href="#">Монтаж печатных плат</a>
-                    </li>
-                  </ul>
-                </div>
-
-
-                <ul class="footer__navigation-list middle-column list-reset">
-                  <li class="footer__navigation-item">
-                    <a class="footer__navigation-link oll-links" href="#">Комплектующие</a>
-                  </li>
-
-                  <li class="footer__navigation-item">
-                    <a class="footer__navigation-link oll-links" href="#">Доставка</a>
-                  </li>
-
-                  <li class="footer__navigation-item">
-                    <a class="footer__navigation-link oll-links" href="#">Контакты</a>
-                  </li>
-                </ul>
+              <div class="footer__content-accordion" data-accordion="content">
+                <nav class="footer__navigation no-js">
+                  <a class="footer__navigation-link oll-links" href="#">О Компании</a>
+                  <a class="footer__navigation-link oll-links" href="#">Продукты</a>
+                  <a class="footer__navigation-link oll-links" href="#">Производство&#8239;печатных плат</a>
+                  <a class="footer__navigation-link oll-links" href="#">Монтаж печатных плат</a>
+                  <a class="footer__navigation-link oll-links" href="#">Комплектующие</a>
+                  <a class="footer__navigation-link oll-links" href="#">Доставка</a>
+                  <a class="footer__navigation-link oll-links" href="#">Контакты</a>
+                </nav>
               </div>
-            </nav>
+            </div>
 
-            <div class="footer__address-wrapper">
-              <div class="footer__accordion-item" data-accordion="element">
-                <h4>Наш офис</h4>
+            <div class="footer__accordion-element footer__address" data-accordion="element">
+              <button class="footer__btn-accordion" type="button" data-accordion="button" tabindex="-1">
+                Наш офис
+              </button>
 
-                <button class="footer__btn" type="button" data-accordion="button">
-                  <span class="visually-hidden">Свернуть / Развернуть меню.</span>
-                </button>
-
-                <div data-accordion="content">
-                  <address class="footer__address">
-                    <span class="footer__location">г.&nbsp;Мытищи, Олимпийский проспект, д.10</span>
-                    <a class="footer__phone footer__navigation-link oll-links" href="tel:+74955894050">+7&nbsp;(495)&nbsp;589-40-50</a>
-                    <a class="footer__phone footer__navigation-link oll-links" href="tel:+79253895829">+7&nbsp;(925)&nbsp;389-58-29</a>
-                    <a class="footer__phone footer__navigation-link oll-links" href="tel:+79253647813">+7&nbsp;(925)&nbsp;364-78-13</a>
-                  </address>
-                </div>
+              <div class="footer__content-accordion" data-accordion="content">
+                <address>
+                  <span class="footer__location">г.&nbsp;Мытищи, Олимпийский проспект, д.10</span>
+                  <a class="footer__phone footer__navigation-link oll-links" href="tel:+74955894050">+7&nbsp;(495)&nbsp;589-40-50</a>
+                  <a class="footer__phone footer__navigation-link oll-links" href="tel:+79253895829">+7&nbsp;(925)&nbsp;389-58-29</a>
+                  <a class="footer__phone footer__navigation-link oll-links" href="tel:+79253647813">+7&nbsp;(925)&nbsp;364-78-13</a>
+                </address>
               </div>
             </div>
           </div>
@@ -398,9 +366,9 @@
                 <span class="visually-hidden">Ваше имя.</span>
               </label>
             </div>
-            <div class="custom-input custom-input--phone" data-validate-type="phone" data-on-input-validate data-required>
-              <label class="visually-hidden" data-validate-type="phone" data-required data-message-base="Поле обязательно к заполнению" for="phone">Ваш телефон:</label>
-              <input type="tel" name="tel" id="feedback-userphone" minlength="10" data-mask="phone" pattern="[+]7[\]\d{3}[\]\d{3}[\]\d{2}[\]\d{2}" placeholder="Телефон" required>
+            <div class="custom-input custom-input--phone" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required>
+              <label class="visually-hidden" for="phone">Ваш телефон:</label>
+              <input type="tel" name="tel" id="feedback-userphone" minlength="10" data-mask="phone" placeholder="Телефон" required>
             </div>
             <div class="custom-textarea" data-validate-type="text">
               <label>

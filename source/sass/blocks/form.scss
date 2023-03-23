@@ -178,6 +178,7 @@
 .form__checkbox:active span,
 .form__checkbox input[type="checkbox"]:disabled ~ span {
   background-color: $color-barossa;
+  border: 1px solid $color-default-white;
   box-shadow: 0 0 0 3px $color-java;
 }
 
@@ -209,6 +210,6 @@
 }
 
 .form__check {
-  padding-top: 18px;
-  padding-left: 33px;
+  padding-top: 20px;
+  padding-left: 25px;
 }

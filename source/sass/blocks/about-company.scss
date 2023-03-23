@@ -10,7 +10,6 @@
 
 .about-company__image {
   margin-right: 100px;
-  margin-left: 7px;
 
   object-fit: contain;
 
@@ -27,7 +26,7 @@
 .about-company__container {
   display: grid;
 
-  gap: 108px;
+  gap: 100px;
   grid-template-columns: 150px 1fr;
 
   @media (max-width: $tablet-size-max) {

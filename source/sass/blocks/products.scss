@@ -80,7 +80,7 @@
 }
 
 .products__container {
-  padding-left: 32px;
+  padding-left: 25px;
 }
 
 .products__card {
@@ -145,7 +145,7 @@
 
 .products__icon {
   position: absolute;
-  right: -2px;
+  right: 0;
   bottom: 0;
 
   @media (max-width: $mobile-size-max) {
@@ -159,7 +159,7 @@
 
   @media (max-width: $tablet-size-max) {
     position: absolute;
-    right: -18px;
+    right: -2px;
     bottom: 0;
   }
 

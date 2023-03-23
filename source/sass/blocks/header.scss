@@ -22,7 +22,6 @@
 
   @media (max-width: $desktop-size-max) {
     padding: 0;
-    padding-left: 7px;
   }
 
   @media (max-width: $tablet-size-min) {
@@ -97,7 +96,7 @@
   color: $color-deep-sky-blue;
 
   @media (max-width: $tablet-size-max) {
-    padding: 30px 17px 50px;
+    padding: 30px 26px 50px 17px;
   }
 
   @media (max-width: $mobile-size-max) {
@@ -150,7 +149,7 @@
 
 .header__btn {
   min-width: 160px;
-  margin-right: 50px;
+  margin-right: 59px;
   margin-bottom: 25px;
   margin-left: auto;
   padding: 9px 17px 13px 17px;
