@@ -19,14 +19,6 @@
   }
 }
 
-.rouble {
-  /* stylelint-disable */
-  font-weight: 400 !important;
-  font-family: $ff-rouble;
-  text-transform: lowercase !important;
-  /* stylelint-enable */
-}
-
 .visually-hidden {
   position: absolute;
 
@@ -61,11 +53,6 @@
   &::-webkit-scrollbar {
     display: none;
   }
-}
-
-.no-transition {
-  /* stylelint-disable-next-line */
-  transition: none !important;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

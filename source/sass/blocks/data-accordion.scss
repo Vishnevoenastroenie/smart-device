@@ -7,7 +7,7 @@
 
 [data-accordion="parent"].no-transition [data-accordion="content"] {
   -webkit-transition: none;
-       -o-transition: none;
+        -o-transition: none;
           transition: none;
 }
 
@@ -16,7 +16,7 @@
   overflow: hidden;
 
   -webkit-transition: max-height 0.3s;
-       -o-transition: max-height 0.3s;
+        -o-transition: max-height 0.3s;
           transition: max-height 0.3s;
 }
 /* stylelint-enable */

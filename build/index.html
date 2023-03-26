@@ -236,7 +236,7 @@
 
       <section class="feedback" id="form">
         <div class="container feedback__container">
-          <div class="feedback__form form" data-form-validate data-callback="base">
+          <div class="feedback__form form" data-form-validate>
             <picture class="feedback__image-wrapper">
               <img class="feedback__image" src="img/paper-airplane.png" srcset="img/paper-airplane@2x.png 2x" width="510" height="285" aria-hidden="true" alt="Бумажный самолёт.">
             </picture>
@@ -244,19 +244,19 @@
             <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
             <p>Мы&nbsp;проконсультируем&nbsp;&nbsp;Вас бесплатно</p>
 
-            <form action="https://echo.htmlacademy.ru/" method="get" autocomplete="off">
+            <form action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
               <div class="feedback__form-container">
                 <div class="form__input form__input--name">
-                  <label class="visually-hidden" for="name" data-message-base="Поле обязательно к заполнению">Ваше имя:</label>
-                  <input id="name" type="text" data-validate-type="text" autofocus placeholder="Имя" name="name" aria-label="Ваше имя." minlength="2" maxlength="25" data-modal-name required>
+                  <label class="visually-hidden" for="name">Ваше имя:</label>
+                  <input id="name" data-validate-type="text" data-limitation="letters" autofocus data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" placeholder="Имя" name="name" aria-label="Ваше имя." data-required>
                 </div>
-                <div class="form__input form__input--phone" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required>
+                <div class="form__input form__input--phone">
                   <label class="visually-hidden" for="phone">Ваш телефон:</label>
-                  <input type="tel" name="tel" id="phone" minlength="10" data-mask="phone" placeholder="Телефон">
+                  <input name="phone" id="phone" placeholder="Телефон" data-validate-type="phone" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required>
                 </div>
                 <textarea data-validate-type="text" placeholder="Ваш вопрос" name="user-question" rows="5" aria-label="Задайте ваш вопрос."></textarea>
-                <label class="form__checkbox form__check form__checkbox--consultation" data-validate-type="checkbox" data-required>
-                  <input class="form__checkbox-input" data-validate-type="checkbox" type="checkbox" aria-label="Поставьте галочку, если согласны на обработку персональных данных." required checked>
+                <label class="form__checkbox form__check form__checkbox--consultation">
+                  <input class="form__checkbox-input" data-validate-type="checkbox" aria-label="Поставьте галочку, если согласны на обработку персональных данных." data-required checked>
                   <span></span>
                   Я&nbsp;согласен на&nbsp;обработку<br>персональных данных
                 </label>
