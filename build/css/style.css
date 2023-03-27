@@ -695,18 +695,12 @@ button,
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  color: #ffffff;
   background-color: rgba(0, 0, 0, 0.8);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  -o-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   pointer-events: none;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -716,50 +710,21 @@ button,
   display: none;
 }
 
-.modal__wrapper {
+.modal__container {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
   min-height: 100%;
-  padding: 60px 40px;
-}
-
-.modal--responsive .modal__content {
-  width: 100%;
-}
-
-.modal--fit-content .modal__content {
-  width: auto;
-}
-
-.modal--no-scale {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.modal--preload {
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
-}
-
-.modal.is-active {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
 }
 
 .modal__overlay {
@@ -774,7 +739,6 @@ button,
 .modal__content {
   position: relative;
   width: 500px;
-  height: 610px;
   margin: 0 auto;
   margin-top: -45px;
   padding: 40px;
@@ -787,50 +751,46 @@ button,
   transform: translateX(-8px);
 }
 
+.modal.is-active {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .modal__heading-wrapper {
   font-size: 16px;
   line-height: 21.5px;
   font-family: "PT Mono", "Arial", sans-serif;
+  color: #ffffff;
 }
 
-.callback-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.modal h3 {
-  margin: 0 0 15px;
+.modal__heading-wrapper h2 {
+  margin: 0;
+  margin-bottom: 15px;
   font-size: 30px;
-  line-height: 42.19px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
+  line-height: 42px;
 }
 
-.modal p {
-  margin: 0 0 40px 0;
-  padding-right: 25px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21.5px;
-  font-family: "PT Mono", "Arial", sans-serif;
+.modal__heading-wrapper p {
+  margin: 0;
+  margin-bottom: 40px;
   -webkit-transform: translateY(-10px);
   -ms-transform: translateY(-10px);
   transform: translateY(-10px);
 }
 
-.custom-input input:not([type=checkbox]),
-.custom-input textarea,
-.custom-textarea input:not([type=checkbox]),
-.custom-textarea textarea {
+.modal__input-wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-template-areas: "username" "userphone" "question" "button" "agreement";
+}
+
+.modal__input input:not([type=checkbox]),
+.modal__input textarea {
   width: 100%;
-  min-width: 420px;
   font-family: "PT Mono", "Arial", sans-serif;
   color: #f2f5f6;
   background-color: #019bdf;
@@ -838,74 +798,59 @@ button,
   border-radius: 3px;
 }
 
-.custom-input input:not([type=checkbox]):hover,
-.custom-input input:not([type=checkbox]):focus,
-.custom-input textarea:hover,
-.custom-input textarea:focus,
-.custom-textarea input:not([type=checkbox]):hover,
-.custom-textarea input:not([type=checkbox]):focus,
-.custom-textarea textarea:hover,
-.custom-textarea textarea:focus {
+.modal__input input:not([type=checkbox])::-webkit-input-placeholder,
+.modal__input textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.modal__input input:not([type=checkbox])::-moz-placeholder,
+.modal__input textarea::-moz-placeholder {
+  color: #ffffff;
+}
+
+.modal__input input:not([type=checkbox]):-ms-input-placeholder,
+.modal__input textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.modal__input input:not([type=checkbox])::-ms-input-placeholder,
+.modal__input textarea::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.modal__input input:not([type=checkbox])::placeholder,
+.modal__input textarea::placeholder {
+  color: #ffffff;
+}
+
+.modal__input input:not([type=checkbox]):hover,
+.modal__input input:not([type=checkbox]):focus,
+.modal__input textarea:hover,
+.modal__input textarea:focus {
   background-color: #026592;
+  outline: none;
   -webkit-box-shadow: 0 0 0 2px #339a9a;
   box-shadow: 0 0 0 2px #339a9a;
 }
 
-.custom-input input:not([type=checkbox]):active,
-.custom-input textarea:active,
-.custom-textarea input:not([type=checkbox]):active,
-.custom-textarea textarea:active {
+.modal__input input:not([type=checkbox]):active,
+.modal__input textarea:active {
+  outline: none;
   opacity: 0.5;
 }
 
-.custom-input input:not([type=checkbox])::-webkit-input-placeholder,
-.custom-input textarea::-webkit-input-placeholder,
-.custom-textarea input:not([type=checkbox])::-webkit-input-placeholder,
-.custom-textarea textarea::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.custom-input input:not([type=checkbox])::-moz-placeholder,
-.custom-input textarea::-moz-placeholder,
-.custom-textarea input:not([type=checkbox])::-moz-placeholder,
-.custom-textarea textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.custom-input input:not([type=checkbox]):-ms-input-placeholder,
-.custom-input textarea:-ms-input-placeholder,
-.custom-textarea input:not([type=checkbox]):-ms-input-placeholder,
-.custom-textarea textarea:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.custom-input input:not([type=checkbox])::-ms-input-placeholder,
-.custom-input textarea::-ms-input-placeholder,
-.custom-textarea input:not([type=checkbox])::-ms-input-placeholder,
-.custom-textarea textarea::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.custom-input input:not([type=checkbox])::placeholder,
-.custom-input textarea::placeholder,
-.custom-textarea input:not([type=checkbox])::placeholder,
-.custom-textarea textarea::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.custom-input input:not([type=checkbox]),
-.custom-textarea input:not([type=checkbox]) {
+.modal__input input:not([type=checkbox]) {
   padding: 15px;
 }
 
-.custom-input textarea,
-.custom-textarea textarea {
+.modal__input textarea {
   width: 100%;
   padding: 25px 15px 25px 15px;
 }
 
-.custom-input--name,
-.custom-textarea--name {
+.modal__input--username {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   width: 100%;
   margin-bottom: 20px;
   -webkit-transform: translateY(-11px);
@@ -914,8 +859,14 @@ button,
   grid-area: username;
 }
 
-.custom-input--phone,
-.custom-textarea--phone {
+.form__input-wrapper > .modal__input--username {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.modal__input--userphone {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   max-width: 100%;
   margin-bottom: 20px;
   -webkit-transform: translateY(-9px);
@@ -924,32 +875,37 @@ button,
   grid-area: userphone;
 }
 
-.custom-textarea {
-  min-width: 420px;
-  min-height: 155px;
-  margin-bottom: 2px;
+.form__input-wrapper > .modal__input--userphone {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
 }
 
-.custom-toggle {
-  padding: 0 10px;
-  font-size: 14px;
-  line-height: 15.58px;
-  font-family: "PT Mono", "Arial", sans-serif;
+.modal__input--question {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  margin-bottom: 25px;
+  -webkit-transform: translateY(-9px);
+  -ms-transform: translateY(-9px);
+  transform: translateY(-9px);
+  grid-area: question;
 }
 
-.custom-toggle span::before {
-  top: 0;
+.form__input-wrapper > .modal__input--question {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
 }
 
-.btn-callback {
-  max-width: unset;
-  margin-top: 33px;
+.modal__input--button {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   margin-bottom: 20px;
-  padding: 14px 163px 11px;
+  padding: 13px;
   padding-bottom: 11px;
   font-weight: 700;
-  font-size: 16px;
   line-height: 19px;
+  color: #ffffff;
+  text-transform: uppercase;
   letter-spacing: 0.05em;
   background-color: #041827;
   border: none;
@@ -957,20 +913,104 @@ button,
   -webkit-transform: translateY(-17px);
   -ms-transform: translateY(-17px);
   transform: translateY(-17px);
+  cursor: pointer;
   grid-area: button;
 }
 
-.btn-callback:hover,
-.btn-callback:focus {
+.form__input-wrapper > .modal__input--button {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.modal__input--button:hover,
+.modal__input--button:focus {
   color: #192024;
   background-color: #ffffff;
+  opacity: 0.8;
 }
 
-.btn-callback:active {
-  background-color: #c4c4c4;
+.modal__input--button:active {
+  opacity: 1;
 }
 
-.modal__close-btn {
+.modal__input--agreement {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  padding-left: 7px;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "PT Mono", "Arial", sans-serif;
+  color: #ffffff;
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+  opacity: 0.8;
+  grid-area: agreement;
+}
+
+.form__input-wrapper > .modal__input--agreement {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+.modal__input--agreement input {
+  position: relative;
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.modal__input--agreement input:checked::after {
+  content: "";
+}
+
+.modal__input--agreement input::after {
+  position: absolute;
+  top: 13%;
+  left: 12%;
+  display: block;
+  width: 7px;
+  height: 5px;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.modal__input--agreement label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 13px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.modal__input--agreement:hover,
+.modal__input--agreement:focus {
+  color: rgba(4, 24, 39, 0.5);
+}
+
+.modal__input--agreement:active {
+  opacity: 1;
+}
+
+.modal__close-button {
   position: absolute;
   top: 15px;
   right: 16px;
@@ -979,20 +1019,25 @@ button,
   height: 40px;
   padding: 0;
   color: #ffffff;
-  background: rgba(255, 255, 255, 0);
+  background: #00b2ff;
   border: none;
   cursor: pointer;
 }
 
-.modal__close-btn:focus::after,
-.modal__close-btn:focus::before,
-.modal__close-btn:hover::after,
-.modal__close-btn:hover::before {
-  background-color: #c4c4c4;
+.modal__close-button:focus::after,
+.modal__close-button:focus::before,
+.modal__close-button:hover::after,
+.modal__close-button:hover::before {
+  color: #192024;
 }
 
-.modal__close-btn::after,
-.modal__close-btn::before {
+.modal__close-button:active::after,
+.modal__close-button:active::before {
+  color: #3c3639;
+}
+
+.modal__close-button::after,
+.modal__close-button::before {
   content: "";
   position: absolute;
   top: 47%;
@@ -1000,59 +1045,15 @@ button,
   display: block;
   width: 28px;
   height: 1px;
-  background-color: #c4c4c4;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.modal__close-btn::before {
+.modal__close-button::before {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
-}
-
-.input-agreement span {
-  padding-left: 7px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  font-family: "PT Mono", "Courier New", monospace;
-  color: #ffffff;
-  opacity: 0.8;
-}
-
-.input-agreement input[type=checkbox] ~ span::after {
-  position: absolute;
-  top: 13%;
-  left: 12%;
-  display: block;
-  width: 7px;
-  height: 5px;
-  background-color: transparent;
-  border: 1px solid #ffffff;
-  border-top: none;
-  border-right: none;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  cursor: pointer;
-}
-
-.input-agreement input[type=checkbox] ~ span::after:hover,
-.input-agreement input[type=checkbox] ~ span::after:focus {
-  background-color: transparent;
-  border-color: #2c39f2;
-}
-
-.input-agreement input[type=checkbox] ~ span::after:active {
-  border-color: #72a0ca;
-  opacity: 0.5;
-}
-
-.input-agreement input[type=checkbox] ~ span:checked {
-  background-color: #00b2ff;
-  border-color: #ffffff;
 }
 
 .custom-input,
@@ -2037,8 +2038,8 @@ button,
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding-top: 164px;
-  padding-bottom: 239px;
+  padding-top: 165px;
+  padding-bottom: 242px;
 }
 
 .feedback__container h2 {
@@ -2064,163 +2065,205 @@ button,
   min-width: 510px;
 }
 
-.feedback__form-container {
-  display: -ms-grid;
-  display: grid;
-  padding-left: 10px;
-  grid-gap: 20px 35px;
-  -ms-grid-columns: 275px 275px;
-  grid-template-columns: 275px 275px;
-}
-
 .form {
   color: #ffffff;
 }
 
-.form h3 {
-  margin-top: 0;
+.form__heading-wrapper h2 {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 36px;
+  line-height: 51px;
+  -webkit-transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  transform: translateX(-5px);
 }
 
-.form p {
-  margin-top: 0;
-  line-height: 22px;
-  font-family: "PT Mono", "Arial", sans-serif;
+.form__heading-wrapper p {
+  margin: 0;
+  margin-bottom: 35px;
 }
 
-.form input,
-.form textarea {
-  min-width: 275px;
-  min-height: 50px;
+.form__input-wrapper {
+  display: -ms-grid;
+  display: grid;
+  max-width: 580px;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+  grid-template-areas: "username userphone" "question question" "button agreement";
+  -ms-grid-columns: 1fr 30px 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form__input input:not([type=checkbox]),
+.form__input textarea {
+  width: 100%;
   line-height: 22px;
-  font-family: "PT Mono", "Arial", sans-serif;
-  color: rgb(255, 255, 255);
+  color: #f2f5f6;
   background-color: #019bdf;
-  border: 2px solid transparent;
+  border: none;
   border-radius: 3px;
-  cursor: text;
 }
 
-.form input:hover,
-.form input:focus,
-.form textarea:hover,
-.form textarea:focus {
+.form__input input:not([type=checkbox])::-webkit-input-placeholder,
+.form__input textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.form__input input:not([type=checkbox])::-moz-placeholder,
+.form__input textarea::-moz-placeholder {
+  color: #ffffff;
+}
+
+.form__input input:not([type=checkbox]):-ms-input-placeholder,
+.form__input textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form__input input:not([type=checkbox])::-ms-input-placeholder,
+.form__input textarea::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form__input input:not([type=checkbox])::placeholder,
+.form__input textarea::placeholder {
+  color: #ffffff;
+}
+
+.form__input input:not([type=checkbox]):hover,
+.form__input input:not([type=checkbox]):focus,
+.form__input textarea:hover,
+.form__input textarea:focus {
   background-color: #026592;
+  outline: none;
   -webkit-box-shadow: 0 0 0 2px #339a9a;
   box-shadow: 0 0 0 2px #339a9a;
 }
 
-.form input:active,
-.form textarea:active {
+.form__input input:not([type=checkbox]):active,
+.form__input textarea:active {
+  outline: none;
   opacity: 0.5;
 }
 
-.form input::-webkit-input-placeholder,
-.form textarea::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.7);
+.form__input input:not([type=checkbox]) {
+  width: 100%;
+  padding: 15px;
 }
 
-.form input::-moz-placeholder,
-.form textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.7);
+.form__input textarea {
+  width: 100%;
+  padding: 23px 15px 20px 15px;
 }
 
-.form input:-ms-input-placeholder,
-.form textarea:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.form input::-ms-input-placeholder,
-.form textarea::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.form input::placeholder,
-.form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.form__input--name {
+.form__input--username {
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
+  margin-bottom: 19px;
+  grid-area: username;
 }
 
-.form__input--phone {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-}
-
-.form textarea {
-  min-height: 155px;
+.form__input-wrapper > .form__input--username {
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1/3;
 }
 
-.form__button {
-  min-width: 45px;
-  padding: 16px 72px 15px 66px;
+.form__input--userphone {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: userphone;
+}
+
+.form__input-wrapper > .form__input--userphone {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.form__input--question {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  margin-bottom: 36px;
+  grid-area: question;
+}
+
+.form__input-wrapper > .form__input--question {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
+.form__input--button {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  margin-right: 10px;
+  padding: 13px;
   font-weight: 700;
-  font-size: 16px;
   line-height: 19px;
-  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
   letter-spacing: 0.05em;
   background-color: #041827;
-  border-color: transparent;
+  border: none;
   border-radius: 3px;
+  cursor: pointer;
+  grid-area: button;
 }
 
-.form__button:hover,
-.form__button:active {
+.form__input-wrapper > .form__input--button {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.form__input--button:hover,
+.form__input--button:focus {
   color: #192024;
-  background-color: #026592;
-}
-
-.form__button:active {
-  opacity: 0.5;
-}
-
-.form__checkbox {
-  font-size: 14px;
-  line-height: 16px;
-  font-family: "PT Mono", "Arial", sans-serif;
+  background-color: #ffffff;
   opacity: 0.8;
 }
 
-.form__checkbox span {
-  position: absolute;
-  margin-left: -25px;
-  background-color: transparent;
+.form__input--button:active {
+  opacity: 1;
+}
+
+.form__input--agreement {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  padding-left: 12px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  opacity: 0.8;
+  grid-area: agreement;
+}
+
+.form__input-wrapper > .form__input--agreement {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+.form__input--agreement input {
+  position: relative;
+  display: block;
+  width: 21px;
+  height: 15px;
+  margin-right: 10px;
   border: 1px solid #ffffff;
   border-radius: 2px;
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-.form__checkbox span:hover,
-.form__checkbox span:focus {
-  border-color: #026592;
+.form__input--agreement input:checked::after {
+  content: "";
 }
 
-.form__checkbox span:active {
-  border-color: #72a0ca;
-  opacity: 0.5;
-}
-
-.form__checkbox input {
+.form__input--agreement input::after {
   position: absolute;
-  z-index: 10;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
-}
-
-.form__checkbox input[type=checkbox]:checked ~ span {
-  position: relative;
+  top: 14%;
+  left: 20%;
   display: block;
   width: 7px;
   height: 5px;
@@ -2232,45 +2275,28 @@ button,
   transform: rotate(-45deg);
 }
 
-.form__checkbox:hover span,
-.form__checkbox input[type=checkbox]:focus ~ span {
-  background-color: #72a0ca;
-  -webkit-box-shadow: 0 0 0 1px #2c39f2;
-  box-shadow: 0 0 0 1px #2c39f2;
-}
-
-.form__checkbox:active span,
-.form__checkbox input[type=checkbox]:disabled ~ span {
-  background-color: #3c3639;
-  border: 1px solid #ffffff;
-  -webkit-box-shadow: 0 0 0 3px #339a9a;
-  box-shadow: 0 0 0 3px #339a9a;
-}
-
-.form__checkbox--consultation {
+.form__input--agreement label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
-  order: 2;
+  padding-top: 13px;
   cursor: pointer;
-  gap: 11px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.form__checkbox--consultation span {
-  width: 14px;
-  height: 14px;
-  margin-bottom: 2px;
-  padding: 0;
+.form__input--agreement:hover,
+.form__input--agreement:focus {
+  color: rgba(4, 24, 39, 0.5);
 }
 
-.form__check {
-  padding-top: 20px;
-  padding-left: 25px;
+.form__input--agreement:active {
+  opacity: 1;
 }
 
 .footer {
@@ -2595,7 +2621,7 @@ button,
 
   .main-block__button {
     margin-top: 11px;
-    margin-left: 58px;
+    margin-left: 46px;
   }
 
   .advantages {
@@ -2707,7 +2733,7 @@ button,
   .feedback__container {
     display: block;
     padding-top: 45px;
-    padding-bottom: 113px;
+    padding-bottom: 122px;
   }
 
   .feedback__form {
@@ -2718,25 +2744,57 @@ button,
     display: none;
   }
 
-  .feedback__form-container {
+  .form__heading-wrapper h2 {
+    margin-bottom: 6px;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+
+  .form__heading-wrapper p {
+    margin-bottom: 25px;
     padding-left: 0;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
   }
 
-  .form input,
-  .form textarea {
-    min-width: 320px;
+  .form__input-wrapper {
+    width: 100%;
+    max-width: 923px;
   }
 
-  .form__button {
-    max-width: 265px;
-    padding: 22px 6px 10px 68px;
+  .form__input textarea {
+    padding: 29px 15px 17px 15px;
   }
 
-  .form__checkbox--consultation {
-    margin-top: -10px;
-    margin-left: -8px;
+  .form__input--username {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .form__input--userphone {
+    width: 100%;
+  }
+
+  .form__input--question {
+    margin-bottom: 32px;
+  }
+
+  .form__input--button {
+    margin-right: 55px;
+    padding-top: 16px;
+    padding-bottom: 10px;
+  }
+
+  .form__input--agreement {
+    padding-left: 0;
+  }
+
+  .form__input--agreement input {
+    width: 18px;
+  }
+
+  .form__input--agreement label {
+    max-width: 235px;
+    padding-top: 8px;
   }
 
   .footer__container {
@@ -2821,19 +2879,6 @@ button,
     max-width: 767px;
     padding-right: 25px;
     padding-left: 25px;
-  }
-
-  .modal__wrapper {
-    padding: 60px 16px;
-  }
-
-  .modal--fit-content .modal__content {
-    width: 100%;
-  }
-
-  .modal__content {
-    width: 100%;
-    padding: 20px;
   }
 
   .header__logo {
@@ -3027,39 +3072,107 @@ button,
     padding-bottom: 89px;
   }
 
-  .feedback__form-container {
-    display: -ms-grid;
-    display: grid;
+  .form__heading-wrapper h2 {
+    margin-bottom: 9px;
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .form__heading-wrapper p {
+    max-width: 262px;
+    margin-bottom: 32px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .form__input-wrapper {
+    grid-template-areas: "username" "userphone" "question" "button" "agreement";
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 
-  .form input,
-  .form textarea {
-    min-width: 270px;
+  .form__input-wrapper > .modal__input--username {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
   }
 
-  .form__input--phone {
+  .form__input-wrapper > .modal__input--userphone {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+
+  .form__input-wrapper > .modal__input--question {
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
-    grid-column: 1/2;
   }
 
-  .form textarea {
-    min-height: 180px;
+  .form__input-wrapper > .modal__input--button {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+
+  .form__input-wrapper > .modal__input--agreement {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+
+  .form__input textarea {
+    padding-top: 25px;
+    padding-bottom: 46px;
+  }
+
+  .form__input--username {
+    width: 100%;
+  }
+
+  .form__input--userphone {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .form__input--question {
+    margin-bottom: 23px;
+  }
+
+  .form__input--button {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+  .form__input-wrapper > .form__input--username {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .form__input-wrapper > .form__input--userphone {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+
+  .form__input-wrapper > .form__input--question {
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
-    grid-column: 1/2;
   }
 
-  .form__button {
-    max-width: 270px;
-    padding: 16px 6px 10px 70px;
+  .form__input-wrapper > .form__input--button {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
   }
 
-  .form__checkbox--consultation {
-    margin-top: -24px;
-    margin-left: -2px;
+  .form__input-wrapper > .form__input--agreement {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+
+  .form__input--agreement input {
+    width: 19px;
+  }
+
+  .form__input--agreement label {
+    padding: 0;
+    padding-left: 6px;
   }
 
   .footer__container {

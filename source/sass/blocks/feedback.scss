@@ -35,8 +35,8 @@
 
   display: flex;
   justify-content: flex-end;
-  padding-top: 164px;
-  padding-bottom: 239px;
+  padding-top: 165px;
+  padding-bottom: 242px;
 
   h2 {
     margin: 0 0 12px;
@@ -79,7 +79,7 @@
   @media (max-width: $tablet-size-max) {
     display: block;
     padding-top: 45px;
-    padding-bottom: 113px;
+    padding-bottom: 122px;
   }
 
   @media (max-width: $mobile-size-max) {
@@ -112,25 +112,5 @@
 
   @media (max-width: $tablet-size-max) {
     display: none;
-  }
-}
-
-.feedback__form-container {
-  display: grid;
-  padding-left: 10px;
-
-  grid-gap: 20px 35px;
-  grid-template-columns: 275px 275px;
-
-  @media (max-width: $tablet-size-max) {
-    padding-left: 0;
-
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (max-width: $mobile-size-max) {
-    display: grid;
-
-    grid-template-columns: 1fr;
   }
 }
