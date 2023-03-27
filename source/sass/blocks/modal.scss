@@ -276,7 +276,6 @@
   position: absolute;
   top: 15px;
   right: 16px;
-  z-index: 1;
 
   width: 40px;
   height: 40px;
@@ -292,7 +291,7 @@
   &:hover {
     &::after,
     &::before {
-      color: $color-black-pearl-second;
+      background-color: $color-silver;
     }
   }
 
