@@ -58,9 +58,9 @@ export class Form {
     return this._validator.validateFormElement(item);
   }
 
+
   _onFormSubmit(event, callback = null) {
     const result = this.validateForm(event.target);
-
     if (result === true && callback) {
       this._callbacks[callback].successCallback(event);
       if (this._callbacks[callback].reset) {

@@ -59,7 +59,7 @@
             </li>
           </ul>
 
-          <a class="header__btn btn" href="#" data-open-modal="feedback">Заказать звонок</a>
+          <a class="header__btn btn" href="#" data-open-modal="modal">Заказать звонок</a>
         </div>
       </div>
     </header>
@@ -79,9 +79,11 @@
         <div class="container">
           <div class="main-block__content">
             <h2>Печатные платы</h2>
-            <p>Производство и монтаж, &#8239;поставка комплектующих, блоков и модулей</p>
-            <a class="main-block__button main-block__button--desctablet btn" data-anchor href="#form">Получить бесплатную консультацию</a>
-            <a class="main-block__button main-block__button--mobile btn" data-anchor href="#form">Бесплатная консультация</a>
+            <h3>Производство и монтаж, &#8239;поставка комплектующих, блоков и модулей</h3>
+            <a class="main-block__button btn" data-anchor href="#form">
+              <p>Получить бесплатную консультацию</p>
+              <p>Бесплатная&nbsp;консультация</p>
+            </a>
           </div>
         </div>
       </section>
@@ -247,16 +249,16 @@
             <form action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
               <div class="feedback__form-container">
                 <div class="form__input form__input--name">
-                  <label class="visually-hidden" for="name">Ваше имя:</label>
-                  <input id="name" data-validate-type="text" data-limitation="letters" autofocus data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" placeholder="Имя" name="name" aria-label="Ваше имя." data-required>
+                  <label class="visually-hidden" for="username" data-validate-type="text" data-required data-message-base="Поле обязательно к заполнению">Ваше имя:</label>
+                  <input type="text" name="username" id="username" placeholder="Имя" aria-label="Ваше имя." required>
                 </div>
                 <div class="form__input form__input--phone">
-                  <label class="visually-hidden" for="phone">Ваш телефон:</label>
-                  <input name="phone" id="phone" placeholder="Телефон" data-validate-type="phone" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required>
+                  <label class="visually-hidden" for="userphone" data-validate-type="phone" data-required data-message-base="Поле обязательно к заполнению">Ваш телефон:</label>
+                  <input type="tel" name="userphone" id="userphone" placeholder="Телефон" required>
                 </div>
-                <textarea data-validate-type="text" placeholder="Ваш вопрос" name="user-question" rows="5" aria-label="Задайте ваш вопрос."></textarea>
-                <label class="form__checkbox form__check form__checkbox--consultation">
-                  <input class="form__checkbox-input" data-validate-type="checkbox" aria-label="Поставьте галочку, если согласны на обработку персональных данных." data-required checked>
+                <textarea placeholder="Ваш вопрос" name="question" rows="5" aria-label="Задайте ваш вопрос."></textarea>
+                <label class="form__checkbox form__check form__checkbox--consultation" data-validate-type="checkbox" data-required>
+                  <input class="form__checkbox-input" type="checkbox" name="agreement" id="agreement" aria-label="Поставьте галочку, если согласны на обработку персональных данных." required checked>
                   <span></span>
                   Я&nbsp;согласен на&nbsp;обработку<br>персональных данных
                 </label>
@@ -308,7 +310,7 @@
             </ul>
           </div>
 
-          <div lass="footer__accordion" data-accordion="parent" data-single="" data-destroy="(max-width: 767px)">
+          <div class="footer__accordion" data-accordion="parent" data-single="" data-destroy="(max-width: 767px)">
             <div class="footer__accordion-element" data-accordion="element">
               <button class="footer__btn-accordion" type="button" data-accordion="button" tabindex="-1">
                 Разделы сайта
@@ -348,47 +350,45 @@
   </div>
 
   <!-- Модалки -->
-  <div class="modal modal--preload" data-modal="feedback">
+  <div class="modal modal--preload" data-modal="modal">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content" data-form-validate>
+      <div class="modal__content form" data-form-validate>
 
         <div class="modal__heading-wrapper">
           <h3>Закажите звонок</h3>
           <p class="modal__description">Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
         </div>
 
-        <div data-form-validate data-callback="base">
-          <form class="callback-form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="custom-input custom-input--name">
-              <label data-validate-type="text" data-limitation="name" data-required data-message-base="Поле обязательно к заполнению">
-                <input type="text" name="name" id="feedback-username" placeholder="Имя" autofocus required>
-                <span class="visually-hidden">Ваше имя.</span>
-              </label>
-            </div>
-            <div class="custom-input custom-input--phone" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required>
-              <label class="visually-hidden" for="phone">Ваш телефон:</label>
-              <input type="tel" name="tel" id="feedback-userphone" minlength="10" data-mask="phone" placeholder="Телефон" required>
-            </div>
-            <div class="custom-textarea" data-validate-type="text">
-              <label>
-                <textarea name="question" id="feedback-userquestion" placeholder="Ваш вопрос" rows="5"></textarea>
-                <span class="visually-hidden">Ваш вопрос.</span>
-              </label>
-            </div>
-            <button class="btn btn-callback" type="submit">Отправить</button>
-            <label data-validate-type="checkbox" data-required>
-              <input class="input-agreement" type="checkbox" name="agreement" id="feedback-agreement" required checked>
-              <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+        <form class="callback-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="custom-input custom-input--name">
+            <label data-validate-type="text" data-required>
+              <input type="text" name="name" id="name" placeholder="Имя" required>
+              <span class="visually-hidden">Ваше имя.</span>
             </label>
-          </form>
-        </div>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап." data-close-modal>
-          <svg width="20" height="20" viewbox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.177086 1.03109C-0.0587882 0.795211 -0.0587881 0.412781 0.177087 0.176905C0.412961 -0.0589705 0.79539 -0.0589706 1.03126 0.176905L10.0001 9.14577L18.9689 0.17691C19.2048 -0.0589653 19.5872 -0.0589653 19.8231 0.176911C20.059 0.412786 20.059 0.795217 19.8231 1.03109L10.8543 9.99996L19.8232 18.9689C20.0591 19.2048 20.0591 19.5872 19.8232 19.8231C19.5873 20.059 19.2049 20.059 18.969 19.8231L10.0001 10.8541L1.03118 19.8231C0.795303 20.059 0.412874 20.059 0.176999 19.8231C-0.0588753 19.5872 -0.0588755 19.2048 0.176999 18.9689L9.14592 9.99996L0.177086 1.03109Z" />
-          </svg>
-        </button>
+          </div>
+          <div class="custom-input custom-input--phone">
+            <label class="visually-hidden" for="userphone" data-validate-type="phone" data-required>Ваш телефон:</label>
+            <input type="tel" name="phone" placeholder="Телефон" required>
+          </div>
+          <div class="custom-textarea" data-validate-type="text">
+            <label>
+              <textarea name="question" placeholder="Ваш вопрос" rows="5"></textarea>
+              <span class="visually-hidden">Ваш вопрос.</span>
+            </label>
+          </div>
+          <button class="btn btn-callback" type="submit">Отправить</button>
+          <label data-validate-type="checkbox" data-required>
+            <input class="input-agreement" type="checkbox" name="agreement" required checked>
+            <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+          </label>
+        </form>
       </div>
+      <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап." data-close-modal>
+        <svg width="20" height="20" viewbox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.177086 1.03109C-0.0587882 0.795211 -0.0587881 0.412781 0.177087 0.176905C0.412961 -0.0589705 0.79539 -0.0589706 1.03126 0.176905L10.0001 9.14577L18.9689 0.17691C19.2048 -0.0589653 19.5872 -0.0589653 19.8231 0.176911C20.059 0.412786 20.059 0.795217 19.8231 1.03109L10.8543 9.99996L19.8232 18.9689C20.0591 19.2048 20.0591 19.5872 19.8232 19.8231C19.5873 20.059 19.2049 20.059 18.969 19.8231L10.0001 10.8541L1.03118 19.8231C0.795303 20.059 0.412874 20.059 0.176999 19.8231C-0.0588753 19.5872 -0.0588755 19.2048 0.176999 18.9689L9.14592 9.99996L0.177086 1.03109Z" />
+        </svg>
+      </button>
     </div>
   </div>
 
