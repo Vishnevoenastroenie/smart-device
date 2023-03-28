@@ -289,34 +289,10 @@
 
   &:focus,
   &:hover {
-    &::after,
-    &::before {
-      background-color: $color-silver;
-    }
+    color: $color-black-pearl-second;
   }
 
   &:active {
-    &::after,
-    &::before {
-      color: $color-barossa;
-    }
-  }
-
-  &::after,
-  &::before {
-    content: "";
-    position: absolute;
-    top: 47%;
-    left: 17%;
-
-    display: block;
-    width: 28px;
-    height: 1px;
-
-    transform: rotate(45deg);
-  }
-
-  &::before {
-    transform: rotate(-45deg);
+    color: $color-barossa;
   }
 }
