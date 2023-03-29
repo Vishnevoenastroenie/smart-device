@@ -26,7 +26,9 @@ $color-picton-blue:                 #72a0ca;
 $color-silver:                      #c4c4c4;
 
 // Gradient
-$header-gradient: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+$header-gradient:                   linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+$main-block-gradient:               linear-gradient(180deg, rgba($color-black-pearl, 0.7) 71.72%, rgba($color-black-pearl, 0) 100%);
+$main-block-gr-tablet:              linear-gradient(180deg, rgba($color-black-pearl-second, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 
 // Typography

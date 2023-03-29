@@ -7,8 +7,7 @@
 
   width: 100%;
 
-  background: $header-gradient;
-  background-color: $color-black-pearl;
+  background-image: $header-gradient;
 
   @media (max-width: $tablet-size-max) {
     position: absolute;
