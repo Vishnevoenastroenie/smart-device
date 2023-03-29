@@ -2383,7 +2383,15 @@ button,
   right: 25px;
   width: 15px;
   height: 1px;
-  background-color: #c4c4c4;
+  background-color: #f2f5f6;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: 0.3s -webkit-transform;
+  transition: 0.3s -webkit-transform;
+  -o-transition: 0.3s transform;
+  transition: 0.3s transform;
+  transition: 0.3s transform, 0.3s -webkit-transform;
 }
 
 .footer__btn-accordion::after {
@@ -2464,6 +2472,20 @@ button,
 
 .social-list__link svg:active {
   color: #72a0ca;
+}
+
+.wrapper {
+  background-color: #f8fdff;
+}
+
+h1,
+h2 {
+  color: #041827;
+}
+
+p,
+a {
+  color: #3c3639;
 }
 
 /* @mixin hover-focus {
@@ -3246,24 +3268,29 @@ button,
   }
 
   .footer__logo {
+    margin: 0;
     margin-bottom: 10px;
   }
 
   .footer__accordion {
+    position: relative;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    width: 100%;
     gap: 0;
   }
 
   .footer__accordion-element + .footer__accordion-element,
   .footer__accordion-element:first-child {
+    margin-right: -25px;
     margin-left: -25px;
     border-top: 1px solid rgba(248, 253, 255, 0.7);
   }
 
   .footer__accordion-element:last-child {
+    margin-right: -25px;
     margin-left: -25px;
     border-bottom: 1px solid rgba(248, 253, 255, 0.7);
   }
@@ -3293,9 +3320,12 @@ button,
 
   .footer__btn-accordion {
     position: relative;
+    display: block;
     width: 100%;
+    min-width: 270px;
     margin: 0;
-    padding: 20px 25px;
+    padding: 18px 176px 21px 24px;
+    text-align: left;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -3327,26 +3357,31 @@ button,
     display: none;
   }
 
-  .footer__btn.is-active {
+  .footer__accordion-element.is-active button {
     padding-bottom: 15px;
     cursor: pointer;
   }
 
-  .footer__btn.is-active::after {
+  .footer__accordion-element.is-active button::after {
     display: none;
   }
 
   .footer__address {
+    min-width: 270px;
+    margin: 0;
     margin-bottom: 35px;
   }
 
   .footer__location,
   .footer__phone {
+    margin-top: -1px;
+    margin-left: 25px;
     font-size: 14px;
     line-height: 19px;
   }
 
   .footer__location {
+    max-width: 270px;
     margin-bottom: 15px;
     font-size: 14px;
     line-height: 18.9px;

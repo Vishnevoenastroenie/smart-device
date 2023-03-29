@@ -14,22 +14,22 @@
 
   @media (min-width: $desktop-size-min) {
     background-image: $main-block-gradient,
-    url("./../img/background-desktop.png");
+      url("./../img/background-desktop.png");
 
     @supports (background-image: $main-block-gradient,
-    url("./../img/background-desktop.webp")) {
+      url("./../img/background-desktop.webp")) {
       background-image: $main-block-gradient,
-      url("./../img/background-desktop.webp");
+        url("./../img/background-desktop.webp");
     }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: $main-block-gradient,
-      url("./../img/background-desktop@2x.png");
+        url("./../img/background-desktop@2x.png");
 
       @supports (background-image: $main-block-gradient,
-      url("./../img/background-desktop@2x.webp")) {
+        url("./../img/background-desktop@2x.webp")) {
         background-image: $main-block-gradient,
-        url("./../img/background-desktop@2x.webp");
+          url("./../img/background-desktop@2x.webp");
       }
     }
   }
@@ -38,22 +38,22 @@
     margin-bottom: 80px;
 
     background-image: $main-block-gr-tablet,
-    url("./../img/background-tablet.png");
+      url("./../img/background-tablet.png");
 
     @supports (background-image: $main-block-gr-tablet,
-    url("./../img/background-tablet.webp")) {
-     background-image: $main-block-gr-tablet,
-      url("./../img/background-tablet.webp");
+      url("./../img/background-tablet.webp")) {
+      background-image: $main-block-gr-tablet,
+        url("./../img/background-tablet.webp");
     }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: $main-block-gr-tablet,
-      url("./../img/background-tablet@2x.png");
+        url("./../img/background-tablet@2x.png");
 
       @supports (background-image: $main-block-gradient,
-      url("./../img/background-tablet@2x.webp")) {
+        url("./../img/background-tablet@2x.webp")) {
         background-image: $main-block-gr-tablet,
-        url("./../img/background-tablet@2x.webp");
+          url("./../img/background-tablet@2x.webp");
       }
     }
   }
@@ -62,22 +62,22 @@
     margin-bottom: 50px;
 
     background-image: $main-block-gradient,
-    url("./../img/background-mobile.png");
+      url("./../img/background-mobile.png");
 
     @supports (background-image: $main-block-gradient,
-    url("./../img/background-mobile.webp")) {
+      url("./../img/background-mobile.webp")) {
       background-image: $main-block-gradient,
         url("./../img/background-mobile.webp");
     }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: $main-block-gradient,
-      url("./../img/background-mobile@2x.png");
+        url("./../img/background-mobile@2x.png");
 
       @supports (background-image: $main-block-gradient,
-      url("./../img/background-mobile@2x.webp")) {
+        url("./../img/background-mobile@2x.webp")) {
         background-image: $main-block-gradient,
-        url("./../img/background-mobile@2x.webp");
+          url("./../img/background-mobile@2x.webp");
       }
     }
   }
