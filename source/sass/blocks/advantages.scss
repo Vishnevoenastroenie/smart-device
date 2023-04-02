@@ -8,7 +8,7 @@
   }
 
   @media (max-width: $mobile-size-max) {
-    margin-bottom: 46px;
+    margin-bottom: 44px;
   }
 }
 
@@ -20,13 +20,11 @@
   grid-template-rows: repeat(2, 1fr);
 
   @media (max-width: $tablet-size-max) {
-    margin-left: -10px;
-
     gap: 29px;
   }
 
   @media (max-width: $mobile-size-max) {
-    margin-left: -10px;
+    margin-left: 0;
 
     grid-template-columns: none;
     grid-template-rows: auto;
@@ -40,7 +38,7 @@
   height: 100%;
   min-height: 300px;
   margin: 0 0 0 5px;
-  padding: 39px 15px 60px 43px;
+  padding: 39px 15px 60px 38px;
 
   border: 1px solid $color-whisper;
   box-shadow: -5px 0 0 $color-deep-sky-blue;

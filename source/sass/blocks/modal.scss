@@ -77,7 +77,6 @@
   font-size: 16px;
   line-height: 21.5px;
   font-family: $ff-pt-mono;
-  color: $color-default-white;
 
   h2 {
     margin: 0;
@@ -85,11 +84,14 @@
 
     font-size: 30px;
     line-height: 42px;
+    color: $color-default-white;
   }
 
   p {
     margin: 0;
     margin-bottom: 40px;
+
+    color: $color-default-white;
 
     transform: translateY(-10px);
   }

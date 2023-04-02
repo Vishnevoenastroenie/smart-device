@@ -16,6 +16,8 @@
   @media (max-width: $tablet-size-max) {
     margin-right: 29px;
     margin-left: -4px;
+
+    transform: translateY(4px);
   }
 
   @media (max-width: $mobile-size-max) {
@@ -79,7 +81,7 @@
 }
 
 .about-company__description-text {
-  min-width: 970px;
+  min-width: 990px;
   margin-bottom: 33px;
 
   @media (max-width: $tablet-size-max) {

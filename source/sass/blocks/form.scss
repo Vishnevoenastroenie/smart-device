@@ -2,6 +2,12 @@
 
 .form {
   color: $color-default-white;
+
+  transform: translateX(-10px);
+
+  @media (max-width: $tablet-size-max) {
+    transform: none;
+  }
 }
 
 .form__heading-wrapper {

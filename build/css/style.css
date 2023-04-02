@@ -764,7 +764,6 @@ button,
   font-size: 16px;
   line-height: 21.5px;
   font-family: "PT Mono", "Arial", sans-serif;
-  color: #ffffff;
 }
 
 .modal__heading-wrapper h2 {
@@ -772,11 +771,13 @@ button,
   margin-bottom: 15px;
   font-size: 30px;
   line-height: 42px;
+  color: #ffffff;
 }
 
 .modal__heading-wrapper p {
   margin: 0;
   margin-bottom: 40px;
+  color: #ffffff;
   -webkit-transform: translateY(-10px);
   -ms-transform: translateY(-10px);
   transform: translateY(-10px);
@@ -1763,7 +1764,7 @@ button,
   height: 100%;
   min-height: 300px;
   margin: 0 0 0 5px;
-  padding: 39px 15px 60px 43px;
+  padding: 39px 15px 60px 38px;
   border: 1px solid #e5e5e5;
   -webkit-box-shadow: -5px 0 0 #00b2ff;
   box-shadow: -5px 0 0 #00b2ff;
@@ -1847,7 +1848,7 @@ button,
 }
 
 .about-company__description-text {
-  min-width: 970px;
+  min-width: 990px;
   margin-bottom: 33px;
 }
 
@@ -2030,6 +2031,9 @@ button,
 
 .form {
   color: #ffffff;
+  -webkit-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
 }
 
 .form__heading-wrapper h2 {
@@ -2273,7 +2277,9 @@ button,
   display: flex;
   max-width: 1320px;
   height: 100%;
-  padding: 42px 0;
+  padding: 0;
+  padding-top: 42px;
+  padding-bottom: 40px;
 }
 
 .footer__social-container {
@@ -2447,7 +2453,7 @@ button,
 }
 
 .footer__phone {
-  padding: 5px 0;
+  padding: 2px 0;
   line-height: 25px;
   font-family: "PT Mono", "Arial", sans-serif;
 }
@@ -2667,7 +2673,6 @@ a {
   }
 
   .advantages__list {
-    margin-left: -10px;
     gap: 29px;
   }
 
@@ -2696,6 +2701,9 @@ a {
   .about-company__image {
     margin-right: 29px;
     margin-left: -4px;
+    -webkit-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    transform: translateY(4px);
   }
 
   .about-company__container {
@@ -2780,6 +2788,12 @@ a {
 
   .feedback__image {
     display: none;
+  }
+
+  .form {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
   }
 
   .form__heading-wrapper h2 {
@@ -3002,11 +3016,11 @@ a {
   }
 
   .advantages {
-    margin-bottom: 46px;
+    margin-bottom: 44px;
   }
 
   .advantages__list {
-    margin-left: -10px;
+    margin-left: 0;
     -ms-grid-columns: none;
     grid-template-columns: none;
     -ms-grid-rows: auto;
@@ -3382,9 +3396,13 @@ a {
 
   .footer__location {
     max-width: 270px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-size: 14px;
     line-height: 18.9px;
+  }
+
+  .footer__phone {
+    padding-bottom: 5px;
   }
 
   .social-list {
