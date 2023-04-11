@@ -141,7 +141,7 @@
   font-family: $ff-pt-mono;
   color: $color-alice-blue;
 
-  @media (max-width: $tablet-size-min) {
+  @media (max-width: $tablet-size-max) {
     display: none;
   }
 }

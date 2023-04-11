@@ -2635,6 +2635,10 @@ a {
     padding: 30px 26px 50px 17px;
   }
 
+  .header__link-text {
+    display: none;
+  }
+
   .header__btn {
     display: none;
   }
@@ -2938,10 +2942,6 @@ a {
 @media (max-width: 768px) {
   .header__container {
     padding: 0;
-  }
-
-  .header__link-text {
-    display: none;
   }
 }
 
