@@ -349,15 +349,6 @@ button::after {
     font-size: 14px;
     line-height: 18.9px;
   }
-
-  &:hover,
-  &:focus {
-    background-color: $color-pacific-blue;
-  }
-
-  &:active {
-    background-color: $color-picton-blue;
-  }
 }
 
 .footer__phone {

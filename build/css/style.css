@@ -1556,15 +1556,25 @@ button,
   display: block;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding: 25px 0 35px;
 }
 
-.header__logo:hover,
-.header__logo:focus {
+.header__logo-link {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  padding-bottom: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.header__logo-link:hover,
+.header__logo-link:focus {
   opacity: 0.8;
 }
 
-.header__logo:active {
+.header__logo-link:active {
   opacity: 0.3;
 }
 
@@ -2230,8 +2240,8 @@ button,
 
 .form__input--agreement input::after {
   position: absolute;
-  top: 14%;
-  left: 20%;
+  top: 13%;
+  left: 22%;
   display: block;
   width: 7px;
   height: 5px;
@@ -2444,15 +2454,6 @@ button,
   font-family: "PT Mono", "Arial", sans-serif;
 }
 
-.footer__location:hover,
-.footer__location:focus {
-  background-color: #019bdf;
-}
-
-.footer__location:active {
-  background-color: #72a0ca;
-}
-
 .footer__phone {
   padding: 2px 0;
   line-height: 25px;
@@ -2614,8 +2615,8 @@ a {
     position: absolute;
   }
 
-  .header__logo {
-    padding: 20px 0 25px;
+  .header__logo-link {
+    padding-bottom: 8px;
   }
 
   .header__list {
@@ -2952,10 +2953,9 @@ a {
     padding-left: 25px;
   }
 
-  .header__logo {
+  .header__logo-link {
     width: 35px;
     height: 35px;
-    padding: 0 0 40px;
   }
 
   .header__list {

@@ -31,7 +31,13 @@
 .header__logo {
   display: block;
   flex-shrink: 0;
-  padding: 25px 0 35px;
+}
+
+.header__logo-link {
+  align-self: center;
+  padding-bottom: 10px;
+
+  user-select: none;
 
   &:hover,
   &:focus {
@@ -43,13 +49,12 @@
   }
 
   @media (max-width: $tablet-size-max) {
-    padding: 20px 0 25px;
+    padding-bottom: 8px;
   }
 
   @media (max-width: $mobile-size-max) {
     width: 35px;
     height: 35px;
-    padding: 0 0 40px;
   }
 }
 
