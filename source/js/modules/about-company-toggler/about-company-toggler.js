@@ -1,5 +1,5 @@
 const aboutCompanyParent = document.querySelector('[data-accordion="parent"]');
-const accordionElement = aboutCompanyParent.querySelector('[data-accordion="element"]');
+const accordionElement = document.querySelector('.about-company__text-hidden');
 const accordionButton = aboutCompanyParent.querySelector('[data-accordion="button"]');
 
 const accordionButtonToggler = () => {

@@ -431,6 +431,7 @@ html {
   color: #041827;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
 }
 
@@ -1647,6 +1648,7 @@ button,
 
 .header__btn {
   min-width: 160px;
+  max-width: 162px;
   margin-right: 59px;
   margin-bottom: 25px;
   margin-left: auto;
@@ -1656,7 +1658,7 @@ button,
   line-height: 16px;
   text-align: center;
   letter-spacing: 0.05em;
-  white-space: nowrap;
+  word-break: break-all;
   background-color: #041827;
   border: 1px solid #f2f5f6;
   border-radius: 3px;
@@ -1709,9 +1711,10 @@ button,
 
 .main-block__button {
   display: inline-block;
+  max-width: 410px;
   margin: 0;
   padding: 17px 25px;
-  white-space: nowrap;
+  word-break: break-all;
   background-color: #00b2ff;
   border: none;
   border-radius: 3px;
@@ -2569,9 +2572,21 @@ a {
 }
 }
 
+@media (max-width: 6000px) {
+  button::before,
+  button::after {
+    display: none;
+  }
+}
+
 @media (max-width: 1920px) {
   .header__container {
     padding: 0;
+  }
+
+  .header__logo svg {
+    width: auto;
+    height: auto;
   }
 
   .header__list {
@@ -3012,8 +3027,9 @@ a {
   }
 
   .main-block__button {
+    max-width: 270px;
     margin-left: 0;
-    padding: 12px 38px;
+    padding: 12px 37px;
   }
 
   .advantages {

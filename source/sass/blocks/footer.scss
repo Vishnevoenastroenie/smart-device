@@ -253,6 +253,10 @@
 
 button::before,
 button::after {
+  @media (max-width: 6000px) {
+    display: none;
+  }
+
   @media (max-width: $desktop-size-max) {
     display: none;
   }
