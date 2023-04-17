@@ -696,7 +696,6 @@ button,
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -734,6 +733,7 @@ button,
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba(3, 16, 27, 0.7);
   cursor: pointer;
 }
 
@@ -768,16 +768,21 @@ button,
 }
 
 .modal__heading-wrapper h2 {
-  margin: 0;
-  margin-bottom: 15px;
+  margin: 0 0 15px;
+  font-weight: 400;
   font-size: 30px;
-  line-height: 42px;
+  line-height: 42.19px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #ffffff;
 }
 
 .modal__heading-wrapper p {
   margin: 0;
   margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.5px;
+  font-family: "PT Mono", "Arial", sans-serif;
   color: #ffffff;
   -webkit-transform: translateY(-10px);
   -ms-transform: translateY(-10px);
@@ -901,7 +906,7 @@ button,
 .modal__input--button {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   padding: 13px;
   padding-bottom: 11px;
   font-weight: 700;
@@ -1703,7 +1708,7 @@ button,
   margin: 0 0 46px;
   font-weight: 400;
   font-size: 22px;
-  line-height: 34px;
+  line-height: 34.1px;
   font-family: "PT Mono", "Arial", sans-serif;
   color: #f2f5f6;
   text-transform: lowercase;
@@ -1777,7 +1782,7 @@ button,
   height: 100%;
   min-height: 300px;
   margin: 0 0 0 5px;
-  padding: 39px 15px 60px 38px;
+  padding: 39px 34px 60px 39px;
   border: 1px solid #e5e5e5;
   -webkit-box-shadow: -5px 0 0 #00b2ff;
   box-shadow: -5px 0 0 #00b2ff;
@@ -1804,6 +1809,8 @@ button,
 .advantages__item p {
   margin: 0 0 10px;
   padding: 0;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 21px;
   font-family: "PT Mono", "Arial", sans-serif;
   color: #041827;
@@ -3137,7 +3144,7 @@ a {
 
   .products__card h3 {
     width: 190px;
-    padding: 26px 30px 0 30px;
+    padding: 26px 28px 0 29px;
     font-size: 18px;
   }
 
@@ -3355,7 +3362,7 @@ a {
     width: 100%;
     min-width: 270px;
     margin: 0;
-    padding: 18px 176px 21px 24px;
+    padding: 22px 176px 21px 24px;
     text-align: left;
     cursor: pointer;
     -webkit-user-select: none;
@@ -3401,6 +3408,8 @@ a {
     min-width: 270px;
     margin: 0;
     margin-bottom: 35px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .footer__location,
@@ -3414,12 +3423,13 @@ a {
   .footer__location {
     max-width: 270px;
     margin-bottom: 20px;
+    padding-top: 2px;
     font-size: 14px;
     line-height: 18.9px;
   }
 
   .footer__phone {
-    padding-bottom: 5px;
+    margin-bottom: 8px;
   }
 
   .social-list {

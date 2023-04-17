@@ -38,7 +38,7 @@
   height: 100%;
   min-height: 300px;
   margin: 0 0 0 5px;
-  padding: 39px 15px 60px 38px;
+  padding: 39px 34px 60px 39px;
 
   border: 1px solid $color-whisper;
   box-shadow: -5px 0 0 $color-deep-sky-blue;
@@ -87,6 +87,8 @@
     margin: 0 0 10px;
     padding: 0;
 
+    font-weight: 400;
+    font-size: 16px;
     line-height: 21px;
     font-family: $ff-pt-mono;
     color: $color-black-pearl;

@@ -13,7 +13,6 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -46,6 +45,7 @@
     width: 100%;
     height: 100%;
 
+    background-color: rgba(3, 16, 27, 0.7);
     cursor: pointer;
   }
 
@@ -79,11 +79,12 @@
   font-family: $ff-pt-mono;
 
   h2 {
-    margin: 0;
-    margin-bottom: 15px;
+    margin: 0 0 15px;
 
+    font-weight: 400;
     font-size: 30px;
-    line-height: 42px;
+    line-height: 42.19px;
+    font-family: $ff-roboto-condensed;
     color: $color-default-white;
   }
 
@@ -91,6 +92,10 @@
     margin: 0;
     margin-bottom: 40px;
 
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21.5px;
+    font-family: $ff-pt-mono;
     color: $color-default-white;
 
     transform: translateY(-10px);
@@ -173,7 +178,7 @@
   }
 
   &--button {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
     padding: 13px;
     padding-bottom: 11px;
 
