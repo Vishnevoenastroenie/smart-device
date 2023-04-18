@@ -44,7 +44,7 @@
     }
 
     @media (max-width: $mobile-size-max) {
-      max-width: 262px;
+      margin-right: 7px;
       margin-bottom: 32px;
 
       font-size: 14px;
@@ -186,6 +186,8 @@
     border-radius: 3px;
     cursor: pointer;
 
+    user-select: none;
+
     grid-area: button;
 
     @media (max-width: $tablet-size-max) {
@@ -225,6 +227,10 @@
 
     @media (max-width: $tablet-size-max) {
       padding-left: 0;
+    }
+
+    @media (max-width: $mobile-size-max) {
+      width: 100%;
     }
 
     input {
@@ -281,11 +287,13 @@
       user-select: none;
 
       @media (max-width: $tablet-size-max) {
-        max-width: 235px;
+        margin-right: 65px;
         padding-top: 8px;
       }
 
       @media (max-width: $mobile-size-max) {
+        width: 100%;
+        margin: 0;
         padding: 0;
         padding-left: 6px;
       }

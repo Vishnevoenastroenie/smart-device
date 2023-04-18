@@ -181,10 +181,7 @@
     display: none;
   }
 
-  &:hover,
-  &:focus,
-  &:active,
-  &:disabled {
+  &:hover {
     color: $color-cerulean;
 
     border: 1px solid $color-cerulean;

@@ -660,6 +660,10 @@ button,
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .btn--red {
@@ -686,7 +690,7 @@ button,
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 5000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -694,8 +698,11 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  outline: 55px solid rgba(3, 16, 27, 0.7);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -741,7 +748,6 @@ button,
   position: relative;
   width: 500px;
   margin: 0 auto;
-  margin-top: -45px;
   padding: 40px;
   padding-top: 36px;
   padding-bottom: 15px;
@@ -1669,10 +1675,7 @@ button,
   border-radius: 3px;
 }
 
-.header__btn:hover,
-.header__btn:focus,
-.header__btn:active,
-.header__btn:disabled {
+.header__btn:hover {
   color: #026592;
   border: 1px solid #026592;
 }
@@ -1857,10 +1860,6 @@ button,
 
 .about-company p {
   margin: 23px 0 0;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21px;
-  font-family: "PT Mono", "Arial", sans-serif;
 }
 
 .about-company p:first-of-type {
@@ -1868,8 +1867,11 @@ button,
 }
 
 .about-company__description-text {
-  min-width: 990px;
   margin-bottom: 33px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: "PT Mono", "Arial", sans-serif;
 }
 
 .about-company__btn {
@@ -2195,6 +2197,10 @@ button,
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   grid-area: button;
 }
 
@@ -2549,6 +2555,7 @@ a {
 
 @media (min-width: 1024px) {
   .main-block {
+    background: width 100%;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(4, 24, 39, 0.7)), to(rgba(4, 24, 39, 0))), url("./../img/background-desktop.png");
     background-image: -o-linear-gradient(top, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-desktop.png");
     background-image: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-desktop.png");
@@ -2556,6 +2563,7 @@ a {
 
 @supports (background-image: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-desktop.webp")) {
     .main-block {
+      background: width 100%;
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(4, 24, 39, 0.7)), to(rgba(4, 24, 39, 0))), url("./../img/background-desktop.webp");
       background-image: -o-linear-gradient(top, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-desktop.webp");
       background-image: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-desktop.webp");
@@ -2565,6 +2573,7 @@ a {
 
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
   .main-block {
+    background: width 100%;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(4, 24, 39, 0.7)), to(rgba(4, 24, 39, 0))), url("./../img/background-desktop@2x.png");
     background-image: -o-linear-gradient(top, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-desktop@2x.png");
     background-image: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-desktop@2x.png");
@@ -2572,6 +2581,7 @@ a {
 
 @supports (background-image: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-desktop@2x.webp")) {
     .main-block {
+      background: width 100%;
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(4, 24, 39, 0.7)), to(rgba(4, 24, 39, 0))), url("./../img/background-desktop@2x.webp");
       background-image: -o-linear-gradient(top, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-desktop@2x.webp");
       background-image: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-desktop@2x.webp");
@@ -2668,6 +2678,7 @@ a {
 
   .main-block {
     margin-bottom: 80px;
+    background: width 100%;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("./../img/background-tablet.png");
     background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("./../img/background-tablet.png");
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("./../img/background-tablet.png");
@@ -2675,6 +2686,7 @@ a {
 
 @supports (background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("./../img/background-tablet.webp")) {
     .main-block {
+      background: width 100%;
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("./../img/background-tablet.webp");
       background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("./../img/background-tablet.webp");
       background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("./../img/background-tablet.webp");
@@ -2727,11 +2739,11 @@ a {
   }
 
   .about-company__image {
-    margin-right: 29px;
+    margin-right: 0;
     margin-left: -4px;
-    -webkit-transform: translateY(4px);
-    -ms-transform: translateY(4px);
-    transform: translateY(4px);
+    -webkit-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    transform: translateY(5px);
   }
 
   .about-company__container {
@@ -2742,13 +2754,9 @@ a {
     margin-bottom: 12px;
   }
 
-  .about-company p {
-    line-height: 21.4px;
-  }
-
   .about-company__description-text {
-    min-width: 495px;
     margin-bottom: 8px;
+    line-height: 21.4px;
   }
 
   .products h2 {
@@ -2873,7 +2881,7 @@ a {
   }
 
   .form__input--agreement label {
-    max-width: 235px;
+    margin-right: 65px;
     padding-top: 8px;
   }
 
@@ -2948,6 +2956,7 @@ a {
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .main-block {
+    background: width 100%;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("./../img/background-tablet@2x.png");
     background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("./../img/background-tablet@2x.png");
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("./../img/background-tablet@2x.png");
@@ -2955,6 +2964,7 @@ a {
 
 @supports (background-image: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-tablet@2x.webp")) {
     .main-block {
+      background: width 100%;
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("./../img/background-tablet@2x.webp");
       background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("./../img/background-tablet@2x.webp");
       background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("./../img/background-tablet@2x.webp");
@@ -2991,6 +3001,7 @@ a {
 
   .main-block {
     margin-bottom: 50px;
+    background: width 100%;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(4, 24, 39, 0.7)), to(rgba(4, 24, 39, 0))), url("./../img/background-mobile.png");
     background-image: -o-linear-gradient(top, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-mobile.png");
     background-image: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-mobile.png");
@@ -2998,6 +3009,7 @@ a {
 
 @supports (background-image: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-mobile.webp")) {
     .main-block {
+      background: width 100%;
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(4, 24, 39, 0.7)), to(rgba(4, 24, 39, 0))), url("./../img/background-mobile.webp");
       background-image: -o-linear-gradient(top, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-mobile.webp");
       background-image: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-mobile.webp");
@@ -3091,6 +3103,17 @@ a {
     display: none;
   }
 
+  .about-company__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0 25px;
+  }
+
   .about-company h2 {
     margin-bottom: 14px;
     font-size: 28px;
@@ -3100,13 +3123,12 @@ a {
   .about-company p {
     margin-top: 18px;
     margin-bottom: -3px;
-    font-size: 14px;
-    line-height: 19px;
   }
 
   .about-company__description-text {
-    min-width: 270px;
     margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 19px;
   }
 
   .about-company__description-text span {
@@ -3172,7 +3194,6 @@ a {
   }
 
   .feedback__container {
-    max-width: 270px;
     padding-top: 46px;
     padding-bottom: 89px;
   }
@@ -3184,7 +3205,7 @@ a {
   }
 
   .form__heading-wrapper p {
-    max-width: 262px;
+    margin-right: 7px;
     margin-bottom: 32px;
     font-size: 14px;
     line-height: 19px;
@@ -3271,11 +3292,17 @@ a {
     -ms-grid-column: 1;
   }
 
+  .form__input--agreement {
+    width: 100%;
+  }
+
   .form__input--agreement input {
     width: 19px;
   }
 
   .form__input--agreement label {
+    width: 100%;
+    margin: 0;
     padding: 0;
     padding-left: 6px;
   }
@@ -3505,6 +3532,7 @@ a {
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .main-block {
+    background: width 100%;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(4, 24, 39, 0.7)), to(rgba(4, 24, 39, 0))), url("./../img/background-mobile@2x.png");
     background-image: -o-linear-gradient(top, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-mobile@2x.png");
     background-image: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-mobile@2x.png");
@@ -3512,6 +3540,7 @@ a {
 
 @supports (background-image: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-mobile@2x.webp")) {
     .main-block {
+      background: width 100%;
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(4, 24, 39, 0.7)), to(rgba(4, 24, 39, 0))), url("./../img/background-mobile@2x.webp");
       background-image: -o-linear-gradient(top, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-mobile@2x.webp");
       background-image: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-mobile@2x.webp");

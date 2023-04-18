@@ -14,10 +14,10 @@
   object-fit: contain;
 
   @media (max-width: $tablet-size-max) {
-    margin-right: 29px;
+    margin-right: 0;
     margin-left: -4px;
 
-    transform: translateY(4px);
+    transform: translateY(5px);
   }
 
   @media (max-width: $mobile-size-max) {
@@ -33,6 +33,12 @@
 
   @media (max-width: $tablet-size-max) {
     gap: 25px;
+  }
+
+  @media (max-width: $mobile-size-max) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
   }
 }
 
@@ -58,40 +64,35 @@
 .about-company p {
   margin: 23px 0 0;
 
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21px;
-  font-family: $ff-pt-mono;
-
   &:first-of-type {
     margin-top: 0;
-  }
-
-  @media (max-width: $tablet-size-max) {
-    line-height: 21.4px;
   }
 
   @media (max-width: $mobile-size-max) {
     margin-top: 18px;
     margin-bottom: -3px;
-
-    font-size: 14px;
-    line-height: 19px;
   }
 }
 
 .about-company__description-text {
-  min-width: 990px;
   margin-bottom: 33px;
 
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: $ff-pt-mono;
+
   @media (max-width: $tablet-size-max) {
-    min-width: 495px;
     margin-bottom: 8px;
+
+    line-height: 21.4px;
   }
 
   @media (max-width: $mobile-size-max) {
-    min-width: 270px;
     margin-bottom: 10px;
+
+    font-size: 14px;
+    line-height: 19px;
   }
 }
 
