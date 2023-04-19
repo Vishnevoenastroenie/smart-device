@@ -6,11 +6,18 @@
   z-index: 5;
 
   width: 100%;
+  min-height: 120px;
 
   background-image: $header-gradient;
 
   @media (max-width: $tablet-size-max) {
     position: absolute;
+
+    min-height: 100px;
+  }
+
+  @media (max-width: $mobile-size-max) {
+    min-height: 70px;
   }
 }
 
@@ -42,6 +49,7 @@
 
 .header__logo-link {
   align-self: center;
+  margin-right: auto;
   padding-bottom: 10px;
 
   user-select: none;
@@ -71,12 +79,10 @@
   flex-wrap: wrap;
   padding-left: 160px;
 
-  column-gap: 120px;
-
   @media (max-width: $desktop-size-max) {
-    padding-left: 160px;
+    padding-left: 13%;
 
-    column-gap: 118px;
+    column-gap: 19%;
   }
 
   @media (max-width: $tablet-size-max) {
@@ -159,11 +165,10 @@
 }
 
 .header__btn {
-  min-width: 160px;
   max-width: 162px;
-  margin-right: 59px;
+  margin-right: 5%; //60пикселей было
   margin-bottom: 25px;
-  margin-left: auto;
+  margin-left: 5% auto;
   padding: 9px 17px 13px 17px;
 
   font-weight: 700;

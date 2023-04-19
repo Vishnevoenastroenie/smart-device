@@ -1549,6 +1549,7 @@ button,
   top: 0;
   z-index: 5;
   width: 100%;
+  min-height: 120px;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background-image: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background-image: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -1574,6 +1575,7 @@ button,
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
+  margin-right: auto;
   padding-bottom: 10px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1600,9 +1602,6 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding-left: 160px;
-  -webkit-column-gap: 120px;
-  -moz-column-gap: 120px;
-  column-gap: 120px;
 }
 
 .header__item {
@@ -1658,11 +1657,10 @@ button,
 }
 
 .header__btn {
-  min-width: 160px;
   max-width: 162px;
-  margin-right: 59px;
+  margin-right: 5%;
   margin-bottom: 25px;
-  margin-left: auto;
+  margin-left: 5% auto;
   padding: 9px 17px 13px 17px;
   font-weight: 700;
   font-size: 14px;
@@ -2608,10 +2606,10 @@ a {
   }
 
   .header__list {
-    padding-left: 160px;
-    -webkit-column-gap: 118px;
-    -moz-column-gap: 118px;
-    column-gap: 118px;
+    padding-left: 13%;
+    -webkit-column-gap: 19%;
+    -moz-column-gap: 19%;
+    column-gap: 19%;
   }
 
   .products__desctablet-hidden {
@@ -2646,6 +2644,7 @@ a {
 
   .header {
     position: absolute;
+    min-height: 100px;
   }
 
   .header__logo-link {
@@ -2981,6 +2980,10 @@ a {
     max-width: 767px;
     padding-right: 25px;
     padding-left: 25px;
+  }
+
+  .header {
+    min-height: 70px;
   }
 
   .header__logo-link {
