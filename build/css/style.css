@@ -1559,6 +1559,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1575,7 +1578,6 @@ button,
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
-  margin-right: auto;
   padding-bottom: 10px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1601,7 +1603,11 @@ button,
   flex-grow: 1;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding-left: 160px;
+  padding-right: 13%;
+  padding-left: 13%;
+  -webkit-column-gap: 25%;
+  -moz-column-gap: 25%;
+  column-gap: 25%;
 }
 
 .header__item {
@@ -1658,9 +1664,8 @@ button,
 
 .header__btn {
   max-width: 162px;
-  margin-right: 5%;
+  margin-right: 60px;
   margin-bottom: 25px;
-  margin-left: 5% auto;
   padding: 9px 17px 13px 17px;
   font-weight: 700;
   font-size: 14px;
@@ -2605,13 +2610,6 @@ a {
     height: auto;
   }
 
-  .header__list {
-    padding-left: 13%;
-    -webkit-column-gap: 19%;
-    -moz-column-gap: 19%;
-    column-gap: 19%;
-  }
-
   .products__desctablet-hidden {
     display: none;
   }
@@ -2625,6 +2623,48 @@ a {
   button::before,
   button::after {
     display: none;
+  }
+}
+
+@media (max-width: 1270px) {
+  .header__list {
+    padding-right: 10%;
+    padding-left: 10%;
+    -webkit-column-gap: 20%;
+    -moz-column-gap: 20%;
+    column-gap: 20%;
+  }
+
+  .header__btn {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 1130px) {
+  .header__list {
+    padding-right: 8%;
+    padding-left: 8%;
+    -webkit-column-gap: 15%;
+    -moz-column-gap: 15%;
+    column-gap: 15%;
+  }
+
+  .header__btn {
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .header__list {
+    padding-right: 7%;
+    padding-left: 7%;
+    -webkit-column-gap: 13%;
+    -moz-column-gap: 13%;
+    column-gap: 13%;
+  }
+
+  .header__btn {
+    margin-right: 20px;
   }
 }
 
@@ -2655,6 +2695,7 @@ a {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
+    padding-right: 3px;
     -webkit-column-gap: 0;
     -moz-column-gap: 0;
     column-gap: 0;

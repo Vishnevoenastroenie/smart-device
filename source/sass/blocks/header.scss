@@ -23,6 +23,7 @@
 
 .header__container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding-right: 60px;
 
@@ -49,7 +50,6 @@
 
 .header__logo-link {
   align-self: center;
-  margin-right: auto;
   padding-bottom: 10px;
 
   user-select: none;
@@ -77,16 +77,35 @@
   display: flex;
   flex-grow: 1;
   flex-wrap: wrap;
-  padding-left: 160px;
+  padding-right: 13%;
+  padding-left: 13%;
 
-  @media (max-width: $desktop-size-max) {
-    padding-left: 13%;
+  column-gap: 25%;
 
-    column-gap: 19%;
+  @media (max-width: 1270px) {
+    padding-right: 10%;
+    padding-left: 10%;
+
+    column-gap: 20%;
+  }
+
+  @media (max-width: 1130px) {
+    padding-right: 8%;
+    padding-left: 8%;
+
+    column-gap: 15%;
+  }
+
+  @media (max-width: 1060px) {
+    padding-right: 7%;
+    padding-left: 7%;
+
+    column-gap: 13%;
   }
 
   @media (max-width: $tablet-size-max) {
     justify-content: flex-end;
+    padding-right: 3px;
 
     column-gap: 0;
   }
@@ -166,9 +185,8 @@
 
 .header__btn {
   max-width: 162px;
-  margin-right: 5%; //60пикселей было
+  margin-right: 60px;
   margin-bottom: 25px;
-  margin-left: 5% auto;
   padding: 9px 17px 13px 17px;
 
   font-weight: 700;
@@ -181,6 +199,18 @@
   background-color: $color-black-pearl;
   border: 1px solid $color-alice-blue;
   border-radius: 3px;
+
+  @media (max-width: 1270px) {
+    margin-right: 50px;
+  }
+
+  @media (max-width: 1130px) {
+    margin-right: 40px;
+  }
+
+  @media (max-width: 1060px) {
+    margin-right: 20px;
+  }
 
   @media (max-width: $tablet-size-max) {
     display: none;
