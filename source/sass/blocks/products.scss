@@ -29,9 +29,12 @@
 
   ul {
     display: grid;
+    justify-content: space-between;
 
-    gap: 7%;
-    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    grid-auto-rows: minmax(650px, 1fr);
+    //grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(150px, 350px));
 
     @media (max-width: $tablet-size-max) {
       display: block;
@@ -88,12 +91,11 @@
 
 .products__card {
   position: relative;
+  //overflow: auto;
 
   display: block;
   height: 100%;
-  overflow: auto;
-
-  //overflow-y: overlay;
+  overflow-y: overlay;
 
   @media (max-width: $tablet-size-max) {
     margin-top: 30px;
@@ -105,13 +107,12 @@
 }
 
 .products__card h3 {
-  position: absolute;
-  top: 0;
-  z-index: 1;
+  position: relative;
+  z-index: 5;
 
-  width: 240px;
+  max-width: 240px;
   margin: 0;
-  padding: 45px 40px 0 40px;
+  padding: 46px 40px;
 
   font-weight: 400;
   font-size: 20px;
@@ -132,23 +133,25 @@
 }
 
 .products__image-wrapper {
+  position: absolute;
+  top: 0;
+
   display: block;
   width: 100%;
   height: 100%;
 
   img {
     width: 100%;
-    height: 100%;
-    //min-width: 350px;
+    min-height: 650px;
 
-    object-fit: contain;
+    object-fit: cover;
 
     @media (max-width: $tablet-size-max) {
-      //min-width: 670px;
+      min-height: 250px;
     }
 
     @media (max-width: $mobile-size-max) {
-      //min-width: 270px;
+      min-height: 250px;
     }
   }
 }
@@ -157,6 +160,9 @@
   position: absolute;
   right: 2px;
   bottom: 0;
+
+  width: 60px;
+  height: 60px;
 
   color: $color-default-white;
 

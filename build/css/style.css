@@ -1939,9 +1939,13 @@ button,
 .products ul {
   display: -ms-grid;
   display: grid;
-  gap: 7%;
-  -ms-grid-columns: (1fr)[3];
-  grid-template-columns: repeat(3, 1fr);
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 30px;
+  grid-auto-rows: minmax(650px, 1fr);
+  -ms-grid-columns: (minmax(150px, 350px))[3];
+  grid-template-columns: repeat(3, minmax(150px, 350px));
 }
 
 .products p:nth-child(even) {
@@ -1956,16 +1960,15 @@ button,
   position: relative;
   display: block;
   height: 100%;
-  overflow: auto;
+  overflow-y: overlay;
 }
 
 .products__card h3 {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  width: 240px;
+  position: relative;
+  z-index: 5;
+  max-width: 240px;
   margin: 0;
-  padding: 45px 40px 0 40px;
+  padding: 46px 40px;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
@@ -1974,6 +1977,8 @@ button,
 }
 
 .products__image-wrapper {
+  position: absolute;
+  top: 0;
   display: block;
   width: 100%;
   height: 100%;
@@ -1981,15 +1986,17 @@ button,
 
 .products__image-wrapper img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
+  min-height: 650px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .products__icon {
   position: absolute;
   right: 2px;
   bottom: 0;
+  width: 60px;
+  height: 60px;
   color: #ffffff;
 }
 
@@ -2835,6 +2842,10 @@ a {
     padding: 37px 45px 0 45px;
   }
 
+  .products__image-wrapper img {
+    min-height: 250px;
+  }
+
   .products__icon {
     position: absolute;
     right: -2px;
@@ -3215,6 +3226,10 @@ a {
     width: 190px;
     padding: 26px 28px 0 29px;
     font-size: 18px;
+  }
+
+  .products__image-wrapper img {
+    min-height: 250px;
   }
 
   .products__icon {
