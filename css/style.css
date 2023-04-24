@@ -1603,11 +1603,11 @@ button,
   flex-grow: 1;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding-right: 13%;
-  padding-left: 13%;
-  -webkit-column-gap: 25%;
-  -moz-column-gap: 25%;
-  column-gap: 25%;
+  padding-right: 11%;
+  padding-left: 11%;
+  -webkit-column-gap: 23%;
+  -moz-column-gap: 23%;
+  column-gap: 23%;
 }
 
 .header__item {
@@ -1779,8 +1779,6 @@ button,
   gap: 30px;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (1fr)[2];
-  grid-template-rows: repeat(2, 1fr);
 }
 
 .advantages__item {
@@ -1952,6 +1950,25 @@ button,
   margin-bottom: 20px;
 }
 
+.products__card--production {
+  z-index: 5;
+  background-color: #3c3639;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.products__card--montage {
+  background-color: #3c3639;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.products__card--accessories {
+  background-color: #3c3639;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .products__container {
   padding-left: 25px;
 }
@@ -1960,7 +1977,6 @@ button,
   position: relative;
   display: block;
   height: 100%;
-  overflow-y: overlay;
 }
 
 .products__card h3 {
@@ -2386,10 +2402,12 @@ button,
   display: block;
   max-width: 220px;
   padding: 4px 0;
+  padding-left: 2px;
   font-size: 16px;
   line-height: 21.6px;
   font-family: "PT Mono", "Arial", sans-serif;
   color: #ffffff;
+  outline-offset: -2px solid;
   opacity: 0.7;
 }
 
@@ -2493,16 +2511,12 @@ button,
 }
 
 .social-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  max-width: 215px;
+  display: -ms-grid;
+  display: grid;
+  max-width: 180px;
   padding-left: 15px;
-  -webkit-column-gap: 25px;
-  -moz-column-gap: 25px;
-  column-gap: 25px;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .social-list__link svg:hover,
@@ -2585,6 +2599,36 @@ a {
       background-image: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-desktop.webp");
     }
 }
+
+  .products__card--production {
+    background-image: url("./../img/desktop-card-production.jpg");
+  }
+
+@supports (background-image: url("./../img/desktop-card-production.webp")) {
+    .products__card--production {
+      background-image: url("./../img/desktop-card-production.webp");
+    }
+}
+
+  .products__card--montage {
+    background-image: url("./../img/desktop-card-montage.jpg");
+  }
+
+@supports (background-image: url("./../img/desktop-card-montage.webp")) {
+    .products__card--montage {
+      background-image: url("./../img/desktop-card-montage.webp");
+    }
+}
+
+  .products__card--accessories {
+    background-image: url("./../img/desktop-card-accessories.jpg");
+  }
+
+@supports (background-image: url("./../img/desktop-card-accessories.webp")) {
+    .products__card--accessories {
+      background-image: url("./../img/desktop-card-accessories.webp");
+    }
+}
 }
 
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
@@ -2601,6 +2645,37 @@ a {
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(4, 24, 39, 0.7)), to(rgba(4, 24, 39, 0))), url("./../img/background-desktop@2x.webp");
       background-image: -o-linear-gradient(top, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-desktop@2x.webp");
       background-image: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-desktop@2x.webp");
+    }
+}
+
+  .products__card--production {
+    background-image: url("./../img/desktop-card-production@2x.jpg");
+  }
+
+@supports (background-image: url("./../img/desktop-card-production@2x.webp")) {
+    .products__card--production {
+      z-index: 5;
+      background-image: url("./../img/desktop-card-production@2x.webp");
+    }
+}
+
+  .products__card--montage {
+    background-image: url("./../img/desktop-card-montage@2x.jpg");
+  }
+
+@supports (background-image: url("./../img/desktop-card-montage@2x.webp")) {
+    .products__card--montage {
+      background-image: url("./../img/desktop-card-montage@2x.webp");
+    }
+}
+
+  .products__card--accessories {
+    background-image: url("./../img/desktop-card-accessories@2x.jpg");
+  }
+
+@supports (background-image: url("./../img/desktop-card-accessories@2x.webp")) {
+    .products__card--accessories {
+      background-image: url("./../img/desktop-card-accessories@2x.webp");
     }
 }
 }
@@ -2620,6 +2695,14 @@ a {
   .header__logo svg {
     width: auto;
     height: auto;
+  }
+
+  .header__list {
+    padding-right: 13%;
+    padding-left: 13%;
+    -webkit-column-gap: 25%;
+    -moz-column-gap: 25%;
+    column-gap: 25%;
   }
 
   .products__desctablet-hidden {
@@ -2826,6 +2909,39 @@ a {
     padding-bottom: 76px;
   }
 
+  .products__card--production {
+    min-height: 250px;
+    background-image: url("./../img/tablet-card-production.jpg");
+  }
+
+@supports (background-image: url("./../img/tablet-card-production.webp")) {
+    .products__card--production {
+      background-image: url("./../img/tablet-card-production.webp");
+    }
+}
+
+  .products__card--montage {
+    min-height: 250px;
+    background-image: url("./../img/tablet-card-montage.jpg");
+  }
+
+@supports (background-image: url("./../img/tablet-card-montage.webp")) {
+    .products__card--montage {
+      background-image: url("./../img/tablet-card-montage.webp");
+    }
+}
+
+  .products__card--accessories {
+    min-height: 250px;
+    background-image: url("./../img/tablet-card-accessories.jpg");
+  }
+
+@supports (background-image: url("./../img/tablet-card-accessories.webp")) {
+    .products__card--accessories {
+      background-image: url("./../img/tablet-card-accessories.webp");
+    }
+}
+
   .products__desctablet-hidden {
     display: none;
   }
@@ -2999,12 +3115,22 @@ a {
   }
 
   .social-list {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    max-width: 150px;
-    margin-left: auto;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-item-align: start;
+    -ms-grid-row-align: start;
+    align-self: start;
+    max-width: 350px;
+    margin-bottom: 5px;
+    margin-left: 0;
     padding-top: 10px;
     padding-left: 0;
+    gap: 25px;
+    row-gap: 10px;
   }
 }
 
@@ -3022,6 +3148,36 @@ a {
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("./../img/background-tablet@2x.webp");
       background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("./../img/background-tablet@2x.webp");
       background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("./../img/background-tablet@2x.webp");
+    }
+}
+
+  .products__card--production {
+    background-image: url("./../img/tablet-card-production@2x.jpg");
+  }
+
+@supports (background-image: url("./../img/tablet-card-production@2x.webp")) {
+    .products__card--production {
+      background-image: url("./../img/tablet-card-production@2x.webp");
+    }
+}
+
+  .products__card--montage {
+    background-image: url("./../img/tablet-card-montage@2x.jpg");
+  }
+
+@supports (background-image: url("./../img/tablet-card-montage@2x.webp")) {
+    .products__card--montage {
+      background-image: url("./../img/tablet-card-montage@2x.webp");
+    }
+}
+
+  .products__card--accessories {
+    background-image: url("./../img/tablet-card-accessories@2x.jpg");
+  }
+
+@supports (background-image: url("./../img/tablet-card-accessories@2x.webp")) {
+    .products__card--accessories {
+      background-image: url("./../img/tablet-card-accessories@2x.webp");
     }
 }
 }
@@ -3213,6 +3369,36 @@ a {
     padding-top: 47px;
     padding-bottom: 86px;
   }
+
+  .products__card--production {
+    background-image: url("./../img/mobile-card-production.jpg");
+  }
+
+@supports (background-image: url("./../img/mobile-card-production.webp")) {
+    .products__card--production {
+      background-image: url("./../img/mobile-card-production.webp");
+    }
+}
+
+  .products__card--montage {
+    background-image: url("./../img/mobile-card-montage.jpg");
+  }
+
+@supports (background-image: url("./../img/mobile-card-montage.webp")) {
+    .products__card--montage {
+      background-image: url("./../img/mobile-card-montage.webp");
+    }
+}
+
+  .products__card--accessories {
+    background-image: url("./../img/mobile-card-accessories.jpg");
+  }
+
+@supports (background-image: url("./../img/mobile-card-accessories.webp")) {
+    .products__card--accessories {
+      background-image: url("./../img/mobile-card-accessories.webp");
+    }
+}
 
   .products__mobile-hidden {
     display: none;
@@ -3518,8 +3704,6 @@ a {
   }
 
   .social-list {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     margin: 0 auto;
     padding-top: 10px;
   }
@@ -3602,6 +3786,36 @@ a {
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(4, 24, 39, 0.7)), to(rgba(4, 24, 39, 0))), url("./../img/background-mobile@2x.webp");
       background-image: -o-linear-gradient(top, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-mobile@2x.webp");
       background-image: linear-gradient(180deg, rgba(4, 24, 39, 0.7) 71.72%, rgba(4, 24, 39, 0) 100%), url("./../img/background-mobile@2x.webp");
+    }
+}
+
+  .products__card--production {
+    background-image: url("./../img/mobile-card-production@2x.jpg");
+  }
+
+@supports (background-image: url("./../img/mobile-card-production@2x.webp")) {
+    .products__card--production {
+      background-image: url("./../img/mobile-card-production@2x.webp");
+    }
+}
+
+  .products__card--montage {
+    background-image: url("./../img/mobile-card-montage@2x.jpg");
+  }
+
+@supports (background-image: url("./../img/mobile-card-montage@2x.webp")) {
+    .products__card--montage {
+      background-image: url("./../img/mobile-card-montage@2x.webp");
+    }
+}
+
+  .products__card--accessories {
+    background-image: url("./../img/mobile-card-accessories@2x.jpg");
+  }
+
+@supports (background-image: url("./../img/mobile-card-accessories@2x.webp")) {
+    .products__card--accessories {
+      background-image: url("./../img/mobile-card-accessories@2x.webp");
     }
 }
 }
