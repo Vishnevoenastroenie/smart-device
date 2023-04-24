@@ -65,6 +65,178 @@
   }
 }
 
+.products__card--production {
+  z-index: 5;
+
+  background-color: $color-barossa;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $desktop-size-min) {
+    background-image: url("./../img/desktop-card-production.jpg");
+
+    @supports (background-image: url("./../img/desktop-card-production.webp")) {
+      background-image: url("./../img/desktop-card-production.webp");
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("./../img/desktop-card-production@2x.jpg");
+
+      @supports (background-image: url("./../img/desktop-card-production@2x.webp")) {
+        z-index: 5;
+
+        background-image: url("./../img/desktop-card-production@2x.webp");
+      }
+    }
+  }
+
+  @media (max-width: $tablet-size-max) {
+    min-height: 250px;
+
+    background-image: url("./../img/tablet-card-production.jpg");
+
+    @supports (background-image: url("./../img/tablet-card-production.webp")) {
+      background-image: url("./../img/tablet-card-production.webp");
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("./../img/tablet-card-production@2x.jpg");
+
+      @supports (background-image: url("./../img/tablet-card-production@2x.webp")) {
+        background-image: url("./../img/tablet-card-production@2x.webp");
+      }
+    }
+  }
+
+  @media (max-width: $mobile-size-max) {
+    background-image: url("./../img/mobile-card-production.jpg");
+
+    @supports (background-image: url("./../img/mobile-card-production.webp")) {
+      background-image: url("./../img/mobile-card-production.webp");
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("./../img/mobile-card-production@2x.jpg");
+
+      @supports (background-image: url("./../img/mobile-card-production@2x.webp")) {
+        background-image: url("./../img/mobile-card-production@2x.webp");
+      }
+    }
+  }
+}
+
+.products__card--montage {
+  background-color: $color-barossa;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $desktop-size-min) {
+    background-image: url("./../img/desktop-card-montage.jpg");
+
+    @supports (background-image: url("./../img/desktop-card-montage.webp")) {
+      background-image: url("./../img/desktop-card-montage.webp");
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("./../img/desktop-card-montage@2x.jpg");
+
+      @supports (background-image: url("./../img/desktop-card-montage@2x.webp")) {
+        background-image: url("./../img/desktop-card-montage@2x.webp");
+      }
+    }
+  }
+
+  @media (max-width: $tablet-size-max) {
+    min-height: 250px;
+
+    background-image: url("./../img/tablet-card-montage.jpg");
+
+    @supports (background-image: url("./../img/tablet-card-montage.webp")) {
+      background-image: url("./../img/tablet-card-montage.webp");
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("./../img/tablet-card-montage@2x.jpg");
+
+      @supports (background-image: url("./../img/tablet-card-montage@2x.webp")) {
+        background-image: url("./../img/tablet-card-montage@2x.webp");
+      }
+    }
+  }
+
+  @media (max-width: $mobile-size-max) {
+    background-image: url("./../img/mobile-card-montage.jpg");
+
+    @supports (background-image: url("./../img/mobile-card-montage.webp")) {
+      background-image: url("./../img/mobile-card-montage.webp");
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("./../img/mobile-card-montage@2x.jpg");
+
+      @supports (background-image: url("./../img/mobile-card-montage@2x.webp")) {
+        background-image: url("./../img/mobile-card-montage@2x.webp");
+      }
+    }
+  }
+}
+
+.products__card--accessories {
+  background-color: $color-barossa;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $desktop-size-min) {
+    background-image: url("./../img/desktop-card-accessories.jpg");
+
+    @supports (background-image: url("./../img/desktop-card-accessories.webp")) {
+      background-image: url("./../img/desktop-card-accessories.webp");
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("./../img/desktop-card-accessories@2x.jpg");
+
+      @supports (background-image: url("./../img/desktop-card-accessories@2x.webp")) {
+        background-image: url("./../img/desktop-card-accessories@2x.webp");
+      }
+    }
+  }
+
+  @media (max-width: $tablet-size-max) {
+    min-height: 250px;
+
+    background-image: url("./../img/tablet-card-accessories.jpg");
+
+    @supports (background-image: url("./../img/tablet-card-accessories.webp")) {
+      background-image: url("./../img/tablet-card-accessories.webp");
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("./../img/tablet-card-accessories@2x.jpg");
+
+      @supports (background-image: url("./../img/tablet-card-accessories@2x.webp")) {
+        background-image: url("./../img/tablet-card-accessories@2x.webp");
+      }
+    }
+  }
+
+  @media (max-width: $mobile-size-max) {
+    background-image: url("./../img/mobile-card-accessories.jpg");
+
+    @supports (background-image: url("./../img/mobile-card-accessories.webp")) {
+      background-image: url("./../img/mobile-card-accessories.webp");
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("./../img/mobile-card-accessories@2x.jpg");
+
+      @supports (background-image: url("./../img/mobile-card-accessories@2x.webp")) {
+        background-image: url("./../img/mobile-card-accessories@2x.webp");
+      }
+    }
+  }
+}
+
 .products__mobile-hidden {
   @media (max-width: $mobile-size-max) {
     display: none;
@@ -91,11 +263,9 @@
 
 .products__card {
   position: relative;
-  //overflow: auto;
 
   display: block;
   height: 100%;
-  overflow-y: overlay;
 
   @media (max-width: $tablet-size-max) {
     margin-top: 30px;
