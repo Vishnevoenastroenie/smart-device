@@ -77,10 +77,17 @@
   display: flex;
   flex-grow: 1;
   flex-wrap: wrap;
-  padding-right: 13%;
-  padding-left: 13%;
+  padding-right: 11%;
+  padding-left: 11%;
 
-  column-gap: 25%;
+  column-gap: 23%;
+
+  @media (max-width: $desktop-size-max) {
+    padding-right: 13%;
+    padding-left: 13%;
+
+    column-gap: 25%;
+  }
 
   @media (max-width: 1270px) {
     padding-right: 10%;
