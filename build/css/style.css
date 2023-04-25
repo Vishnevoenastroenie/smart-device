@@ -2082,11 +2082,10 @@ button,
 }
 
 .feedback__image {
-  position: absolute;
-  top: 245px;
-  left: 39px;
-  z-index: 1;
+  z-index: 3;
   min-width: 510px;
+  margin-right: 120px;
+  padding-top: 82px;
 }
 
 .form {
@@ -2715,9 +2714,9 @@ a {
   }
 
   .feedback__image {
-    top: 246px;
-    left: 25px;
-    width: 350px;
+    margin-right: 130px;
+    padding-top: 82px;
+    aspect-ratio: auto 510/285;
   }
 
   button::before,
@@ -2784,6 +2783,34 @@ a {
   .header__btn {
     margin-right: 10px;
   }
+
+  .feedback__image {
+    margin-right: 60px;
+  }
+
+  .footer__navigation {
+    margin-right: 0;
+  }
+
+  .footer__navigation {
+    margin-right: -10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .feedback__image {
+    margin-right: 70px;
+  }
+
+  .footer__navigation {
+    margin-right: -20px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .footer__navigation {
+    margin-right: -30px;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -2797,6 +2824,26 @@ a {
 
   .header__btn {
     margin-right: 0;
+  }
+
+  .feedback__image {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .footer__navigation {
+    margin-right: -40px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .feedback__image {
+    margin-right: 40px;
+  }
+
+  .footer__navigation {
+    margin-right: -60px;
   }
 }
 

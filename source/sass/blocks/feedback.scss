@@ -98,18 +98,33 @@
 }
 
 .feedback__image {
-  position: absolute;
-  top: 245px;
-  left: 39px;
-  z-index: 1;
+  z-index: 3;
 
   min-width: 510px;
+  margin-right: 120px;
+  padding-top: 82px;
 
   @media (max-width: $desktop-size-max) {
-    top: 246px;
-    left: 25px;
+    margin-right: 130px;
+    padding-top: 82px;
 
-    width: 350px;
+    aspect-ratio: auto 510 / 285;
+  }
+
+  @media (max-width: 1200px) {
+    margin-right: 70px;
+  }
+
+  @media (max-width: 1250px) {
+    margin-right: 60px;
+  }
+
+  @media (max-width: 1100px) {
+    margin-right: 50px;
+  }
+
+  @media (max-width: 1050px) {
+    margin-right: 40px;
   }
 
   @media (max-width: $tablet-size-max) {
