@@ -1565,6 +1565,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-top: 22px;
   padding-right: 60px;
 }
 
@@ -1611,7 +1612,7 @@ button,
 }
 
 .header__item {
-  padding: 45px 0 55px;
+  padding: 10px 0 10px;
 }
 
 .header__link {
@@ -1663,6 +1664,7 @@ button,
 }
 
 .header__btn {
+  min-width: 162px;
   max-width: 162px;
   margin-right: 60px;
   margin-bottom: 25px;
@@ -2692,6 +2694,7 @@ a {
 @media (max-width: 1920px) {
   .header__container {
     padding: 0;
+    padding-top: 22px;
   }
 
   .header__logo svg {
@@ -2723,27 +2726,25 @@ a {
   }
 }
 
-@media (max-width: 1270px) {
-  .header__list {
-    padding-right: 10%;
-    padding-left: 10%;
-    -webkit-column-gap: 20%;
-    -moz-column-gap: 20%;
-    column-gap: 20%;
+@media (max-width: 1900px) {
+  .header__btn {
+    margin-right: 55px;
   }
+}
 
+@media (max-width: 1800px) {
   .header__btn {
     margin-right: 50px;
   }
 }
 
-@media (max-width: 1130px) {
+@media (max-width: 1700px) {
   .header__list {
-    padding-right: 8%;
-    padding-left: 8%;
-    -webkit-column-gap: 15%;
-    -moz-column-gap: 15%;
-    column-gap: 15%;
+    padding-right: 12%;
+    padding-left: 12%;
+    -webkit-column-gap: 23%;
+    -moz-column-gap: 23%;
+    column-gap: 23%;
   }
 
   .header__btn {
@@ -2751,17 +2752,51 @@ a {
   }
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 1500px) {
   .header__list {
-    padding-right: 7%;
-    padding-left: 7%;
-    -webkit-column-gap: 13%;
-    -moz-column-gap: 13%;
-    column-gap: 13%;
+    padding-right: 11%;
+    padding-left: 11%;
+    -webkit-column-gap: 20%;
+    -moz-column-gap: 20%;
+    column-gap: 20%;
+  }
+
+  .header__btn {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .header__list {
+    padding-right: 10%;
+    padding-left: 10%;
+    -webkit-column-gap: 18%;
+    -moz-column-gap: 18%;
+    column-gap: 18%;
   }
 
   .header__btn {
     margin-right: 20px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .header__btn {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .header__list {
+    padding-right: 9%;
+    padding-left: 9%;
+    -webkit-column-gap: 16%;
+    -moz-column-gap: 16%;
+    column-gap: 16%;
+  }
+
+  .header__btn {
+    margin-right: 0;
   }
 }
 

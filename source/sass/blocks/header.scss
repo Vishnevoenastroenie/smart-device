@@ -25,10 +25,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 22px;
   padding-right: 60px;
 
   @media (max-width: $desktop-size-max) {
     padding: 0;
+    padding-top: 22px;
   }
 
   @media (max-width: $tablet-size-min) {
@@ -89,25 +91,32 @@
     column-gap: 25%;
   }
 
-  @media (max-width: 1270px) {
-    padding-right: 10%;
-    padding-left: 10%;
+  @media (max-width: 1700px) {
+    padding-right: 12%;
+    padding-left: 12%;
+
+    column-gap: 23%;
+  }
+
+  @media (max-width: 1500px) {
+    padding-right: 11%;
+    padding-left: 11%;
 
     column-gap: 20%;
   }
 
-  @media (max-width: 1130px) {
-    padding-right: 8%;
-    padding-left: 8%;
+  @media (max-width: 1300px) {
+    padding-right: 10%;
+    padding-left: 10%;
 
-    column-gap: 15%;
+    column-gap: 18%;
   }
 
-  @media (max-width: 1060px) {
-    padding-right: 7%;
-    padding-left: 7%;
+  @media (max-width: 1100px) {
+    padding-right: 9%;
+    padding-left: 9%;
 
-    column-gap: 13%;
+    column-gap: 16%;
   }
 
   @media (max-width: $tablet-size-max) {
@@ -124,7 +133,8 @@
 }
 
 .header__item {
-  padding: 45px 0 55px;
+  //padding: 45px 0 55px;
+  padding: 10px 0 10px;
 
   @media (max-width: $tablet-size-max) {
     padding: 0;
@@ -191,6 +201,7 @@
 }
 
 .header__btn {
+  min-width: 162px;
   max-width: 162px;
   margin-right: 60px;
   margin-bottom: 25px;
@@ -207,16 +218,32 @@
   border: 1px solid $color-alice-blue;
   border-radius: 3px;
 
-  @media (max-width: 1270px) {
+  @media (max-width: 1900px) {
+    margin-right: 55px;
+  }
+
+  @media (max-width: 1800px) {
     margin-right: 50px;
   }
 
-  @media (max-width: 1130px) {
+  @media (max-width: 1700px) {
     margin-right: 40px;
   }
 
-  @media (max-width: 1060px) {
+  @media (max-width: 1500px) {
+    margin-right: 30px;
+  }
+
+  @media (max-width: 1300px) {
     margin-right: 20px;
+  }
+
+  @media (max-width: 1250px) {
+    margin-right: 10px;
+  }
+
+  @media (max-width: 1100px) {
+    margin-right: 0;
   }
 
   @media (max-width: $tablet-size-max) {
