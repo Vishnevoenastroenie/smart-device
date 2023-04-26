@@ -1879,6 +1879,14 @@ button,
   font-family: "PT Mono", "Arial", sans-serif;
 }
 
+.about-company__description.is-active [data-accordion=element-mobile] {
+  display: block;
+}
+
+[data-accordion=element-mobile] {
+  padding-bottom: 0;
+}
+
 .about-company__btn {
   padding: 14px 50px;
   font-weight: 700;
@@ -2789,6 +2797,12 @@ a {
   .header__btn {
     margin-right: 20px;
   }
+
+  .footer__accordion {
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
 }
 
 @media (max-width: 1250px) {
@@ -2800,12 +2814,10 @@ a {
     margin-right: 60px;
   }
 
-  .footer__navigation {
-    margin-right: 0;
-  }
-
-  .footer__navigation {
-    margin-right: -10px;
+  .footer__accordion {
+    -webkit-transform: translateX(-30px);
+    -ms-transform: translateX(-30px);
+    transform: translateX(-30px);
   }
 }
 
@@ -2814,14 +2826,23 @@ a {
     margin-right: 70px;
   }
 
-  .footer__navigation {
-    margin-right: -20px;
+  .footer__accordion {
+    -webkit-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    transform: translateX(-50px);
+  }
+
+  .footer__location,
+  .footer__phone {
+    min-width: 270px;
   }
 }
 
 @media (max-width: 1150px) {
-  .footer__navigation {
-    margin-right: -30px;
+  .footer__accordion {
+    -webkit-transform: translateX(-60px);
+    -ms-transform: translateX(-60px);
+    transform: translateX(-60px);
   }
 }
 
@@ -2844,11 +2865,23 @@ a {
     -ms-transform: scale(0.8);
     transform: scale(0.8);
   }
+
+  .footer__location,
+  .footer__phone {
+    min-width: 245px;
+  }
 }
 
 @media (max-width: 1060px) {
-  .footer__navigation {
-    margin-right: -40px;
+  .footer__accordion {
+    -webkit-transform: translateX(-70px);
+    -ms-transform: translateX(-70px);
+    transform: translateX(-70px);
+  }
+
+  .footer__location,
+  .footer__phone {
+    min-width: 240px;
   }
 }
 
@@ -2860,8 +2893,28 @@ a {
     transform: scale(0.8);
   }
 
-  .footer__navigation {
-    margin-right: -60px;
+  .footer__accordion {
+    -webkit-transform: translateX(-80px);
+    -ms-transform: translateX(-80px);
+    transform: translateX(-80px);
+  }
+
+  .footer__location,
+  .footer__phone {
+    min-width: 230px;
+  }
+}
+
+@media (max-width: 1030px) {
+  .footer__accordion {
+    -webkit-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+
+  .footer__location,
+  .footer__phone {
+    min-width: 220px;
   }
 }
 
@@ -2882,6 +2935,10 @@ a {
   .header {
     position: absolute;
     min-height: 100px;
+  }
+
+  .header__container {
+    padding: 0;
   }
 
   .header__logo-link {
@@ -2995,6 +3052,10 @@ a {
   .about-company__description-text {
     margin-bottom: 8px;
     line-height: 21.4px;
+  }
+
+  [data-accordion=element-mobile] {
+    padding-bottom: 0;
   }
 
   .products h2 {
@@ -3187,10 +3248,22 @@ a {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
     gap: 0;
   }
 
   .footer__navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     min-width: 220px;
     max-height: 230px;
     margin-right: 128px;
@@ -3282,12 +3355,6 @@ a {
       background-image: url("./../img/tablet-card-accessories@2x.webp");
     }
 }
-}
-
-@media (max-width: 768px) {
-  .header__container {
-    padding: 0;
-  }
 }
 
 @media (max-width: 767px) {
@@ -3447,7 +3514,11 @@ a {
     line-height: 19px;
   }
 
-  .about-company__description-text span {
+  .about-company__description.is-active [data-accordion=element-mobile] {
+    padding-bottom: 20px;
+  }
+
+  [data-accordion=element-mobile] {
     display: none;
   }
 
@@ -3690,6 +3761,9 @@ a {
     -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
     gap: 0;
   }
 
