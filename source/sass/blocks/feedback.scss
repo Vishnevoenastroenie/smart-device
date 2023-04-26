@@ -79,6 +79,16 @@
     }
   }
 
+  @media (max-width: 1800px) {
+    padding-top: 150px;
+    padding-bottom: 200px;
+  }
+
+  @media (max-width: 1600px) {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+
   @media (max-width: $tablet-size-max) {
     display: block;
     padding-top: 45px;
@@ -108,7 +118,7 @@
     margin-right: 130px;
     padding-top: 82px;
 
-    aspect-ratio: auto 510 / 285;
+    aspect-ratio: auto 510 / 285;   //При размере 1020 на 570
   }
 
   @media (max-width: 1200px) {
@@ -121,10 +131,14 @@
 
   @media (max-width: 1100px) {
     margin-right: 50px;
+
+    transform: scale(0.8);
   }
 
   @media (max-width: 1050px) {
     margin-right: 40px;
+
+    transform: scale(0.8);
   }
 
   @media (max-width: $tablet-size-max) {

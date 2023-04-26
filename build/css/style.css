@@ -2735,6 +2735,11 @@ a {
   .header__btn {
     margin-right: 50px;
   }
+
+  .feedback__container {
+    padding-top: 150px;
+    padding-bottom: 200px;
+  }
 }
 
 @media (max-width: 1700px) {
@@ -2748,6 +2753,13 @@ a {
 
   .header__btn {
     margin-right: 40px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .feedback__container {
+    padding-top: 100px;
+    padding-bottom: 150px;
   }
 }
 
@@ -2828,6 +2840,9 @@ a {
 
   .feedback__image {
     margin-right: 50px;
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 
@@ -2840,6 +2855,9 @@ a {
 @media (max-width: 1050px) {
   .feedback__image {
     margin-right: 40px;
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
   }
 
   .footer__navigation {
