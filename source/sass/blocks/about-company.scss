@@ -97,7 +97,23 @@
   }
 }
 
-.about-company__description-text span {
+.about-company__description.is-active {
+  [data-accordion="element-mobile"] {
+    display: block;
+
+    @media (max-width: $mobile-size-max) {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+[data-accordion="element-mobile"] {
+  padding-bottom: 0;
+
+  @media (max-width: $tablet-size-max) {
+    padding-bottom: 0;
+  }
+
   @media (max-width: $mobile-size-max) {
     display: none;
   }

@@ -1879,6 +1879,14 @@ button,
   font-family: "PT Mono", "Arial", sans-serif;
 }
 
+.about-company__description.is-active [data-accordion=element-mobile] {
+  display: block;
+}
+
+[data-accordion=element-mobile] {
+  padding-bottom: 0;
+}
+
 .about-company__btn {
   padding: 14px 50px;
   font-weight: 700;
@@ -2884,6 +2892,10 @@ a {
     min-height: 100px;
   }
 
+  .header__container {
+    padding: 0;
+  }
+
   .header__logo-link {
     padding-bottom: 8px;
   }
@@ -2995,6 +3007,10 @@ a {
   .about-company__description-text {
     margin-bottom: 8px;
     line-height: 21.4px;
+  }
+
+  [data-accordion=element-mobile] {
+    padding-bottom: 0;
   }
 
   .products h2 {
@@ -3284,12 +3300,6 @@ a {
 }
 }
 
-@media (max-width: 768px) {
-  .header__container {
-    padding: 0;
-  }
-}
-
 @media (max-width: 767px) {
   .container {
     max-width: 767px;
@@ -3447,7 +3457,11 @@ a {
     line-height: 19px;
   }
 
-  .about-company__description-text span {
+  .about-company__description.is-active [data-accordion=element-mobile] {
+    padding-bottom: 20px;
+  }
+
+  [data-accordion=element-mobile] {
     display: none;
   }
 
