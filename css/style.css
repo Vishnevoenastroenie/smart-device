@@ -1547,7 +1547,7 @@ button,
 .header {
   position: fixed;
   top: 0;
-  z-index: 5;
+  z-index: 10;
   width: 100%;
   min-height: 120px;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
