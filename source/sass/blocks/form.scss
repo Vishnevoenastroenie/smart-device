@@ -1,6 +1,8 @@
 @import "../variables";
 
 .form {
+  width: 100%;
+
   color: $color-default-white;
 
   transform: translateX(-10px);
@@ -184,6 +186,7 @@
     background-color: $color-black-pearl;
     border: none;
     border-radius: 3px;
+    transform: translateY(-6px);
     cursor: pointer;
 
     user-select: none;
@@ -194,11 +197,15 @@
       margin-right: 55px;
       padding-top: 16px;
       padding-bottom: 10px;
+
+      transform: none;
     }
 
     @media (max-width: $mobile-size-max) {
       margin-right: 0;
       margin-bottom: 25px;
+
+      transform: none;
     }
 
     &:hover,
@@ -280,8 +287,14 @@
     label {
       display: flex;
       align-items: center;
+      align-self: flex-end;
       padding-top: 13px;
 
+      font-size: 14px;
+      line-height: 120%;
+      font-family: $ff-pt-mono;
+
+      transform: translateY(-5px);
       cursor: pointer;
 
       user-select: none;
@@ -289,6 +302,8 @@
       @media (max-width: $tablet-size-max) {
         margin-right: 65px;
         padding-top: 8px;
+
+        transform: none;
       }
 
       @media (max-width: $mobile-size-max) {
@@ -296,6 +311,8 @@
         margin: 0;
         padding: 0;
         padding-left: 6px;
+
+        transform: none;
       }
     }
 
